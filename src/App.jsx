@@ -4,12 +4,14 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Typography from './components/common/Typography'
 import Headline from './components/common/Headline'
+import Section from './components/layout-ui/Section'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <Section>
+
       <div>
         <a href="https://vite.dev" target="_blank" className='bg-red-600' >
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -33,7 +35,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </Section>
+
   )
 }
 

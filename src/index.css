@@ -197,8 +197,3 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.container {
-  max-width: 118.75rem;
-  margin: 0 auto;
-}
