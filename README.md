@@ -11,8 +11,8 @@ Currently, two official plugins are available:
 
 Tasks:
 - Setup ✔
-- Components
-Typography, Headline, Section, Button
+- Components ✔
+Typography, Headline, Section, Button ✔
 - Sections
 - UI
 - Animation
