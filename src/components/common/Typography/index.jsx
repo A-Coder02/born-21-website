@@ -13,7 +13,7 @@ import React from 'react'
 const Typography = ({ component: Component = 'p', variant = 'base', children = null, className = "" }) => {
 
     const _variant = getVariant(variant);
-    const _className = `font-nueue ${_variant} ${className}`;
+    const _className = `${_variant} ${className}`;
 
     return <Component className={_className}>{children}</Component>;
 };
