@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+/* Font Family - Nueue Haas Display */
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayBold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayRoman.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayThin.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayXThin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NeueHaasDisplay';
+  src: url('./assets/fonts/neue/NeueHaasDisplayXXThin.ttf') format('truetype');
+  font-weight: 50;
+  font-style: normal;
+}
+
+/* Font Family - Nohemi */
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-ExtraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nohemi';
+  src: url('./assets/fonts/nohemi/Nohemi-VF.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+/* Colors */
+
+@theme {
+
+  --color-white: #FFFFFF;
+  --color-black: #2B2B2B;
+
+  --color-primary: #FFE500;
+  --color-info: #1EBCFF;
+  --color-info-dark: #0E375D;
+  --color-brown-dark: #442904;
+  --color-green: #0ABF8F;
+  --color-green-dark: #012D26;
+
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-family: 'NeueHaasDisplay', serif;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 118.75rem;
+  margin: 0 auto;
+}
