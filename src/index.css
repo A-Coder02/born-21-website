@@ -127,7 +127,6 @@
   src: url('./assets/fonts/nohemi/Nohemi-VF.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
-  @apply text-
 }
 
 /* Colors */
@@ -161,6 +160,21 @@
   --text-4xl: 1.75rem;
   /* 36px */
   --text-5xl: 2.25rem;
+
+  /* 160px */
+  --text-h1: 10rem;
+  /* 152px */
+  --text-h2: 9.5rem;
+  /* 80px */
+  --text-h3: 5rem;
+  /* 66px */
+  --text-h4: 4.125rem;
+  /* 48px */
+  --text-h5: 3rem;
+
+  --font-nohemi: 'Nohemi';
+  --font-nueue: 'NeueHaasDisplay';
+
 }
 
 *,

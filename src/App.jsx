@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Typography from './components/common/Typography'
+import Headline from './components/common/Headline'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,8 @@ function App() {
         </a>
       </div>
       <Typography variant='2xl' >Vite + React</Typography>
+      <Typography variant='5xl' >Vite + React</Typography>
+      <Headline variant='h3'>Vite + React</Headline>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>

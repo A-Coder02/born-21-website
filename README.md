@@ -12,6 +12,7 @@ Currently, two official plugins are available:
 Tasks:
 - Setup ✔
 - Components
+Typography, Headline
 - Sections
 - UI
 - Animation
