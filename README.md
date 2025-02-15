@@ -12,8 +12,12 @@ Currently, two official plugins are available:
 Tasks:
 - Setup ✔
 - Components
-Typography, Headline, Section
+Typography, Headline, Section, Button
 - Sections
 - UI
 - Animation
 - API Integration
+
+Lib for Animation: 
+- https://github.com/woofers/react-wavify#readme
+- Framer Motion

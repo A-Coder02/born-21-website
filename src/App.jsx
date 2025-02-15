@@ -5,6 +5,7 @@ import './App.css'
 import Typography from './components/common/Typography'
 import Headline from './components/common/Headline'
 import Section from './components/layout-ui/Section'
+import Button from './components/common/Button'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,12 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
+      </div>
+      <div className="">
+        <Button variant='primary'>1</Button>
+        <Button variant='secondary' rounded >2</Button>
+        <Button size='lg' variant='primary' rounded >Start your journey</Button>
+        <Button size='md' variant='secondary' rounded endIcon={'R'} >Grow My Channel</Button>
       </div>
       <Typography variant='2xl' >Vite + React</Typography>
       <Typography variant='5xl' >Vite + React</Typography>
