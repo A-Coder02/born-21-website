@@ -8,10 +8,10 @@ import Typography from '../../common/Typography'
 
 const Appbar = () => {
     return (
-        <Section containerClassName='!py-16 !px-8' sectionClassName='fixed top-0 left-0' >
-            <div className="header-wrapper flex items-center justify-between ">
+        <Section containerClassName='!py-16 !px-32' sectionClassName='fixed top-0 left-0 z-50' >
+            <div className="header-wrapper flex items-center justify-between">
 
-                <div className="brand-wrapper flex gap-1">
+                <div className="brand-wrapper flex gap-1 text-white">
                     <img src={BrandPng} className='w-28' alt="born-21" />
                     <span className="brand-name flex flex-col font-nohemi">
                         <span>
@@ -26,11 +26,11 @@ const Appbar = () => {
                     </span>
                 </div>
 
-                <nav className="nav-wrapper flex gap-4 items-center">
+                <nav className="nav-wrapper flex gap-4 items-center text-white">
                     <Typography variant='4xl' className='font-medium cursor-pointer !pr-4 border-r border-r-white' >Menu</Typography>
                     <Typography
                         variant='4xl'
-                        className='group font-medium cursor-pointer inline-flex gap-3 items-center'
+                        className='group font-medium  cursor-pointer  inline-flex gap-3 items-center'
                     >
                         <span className="relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 group-hover:before:w-full">
                             Start a project

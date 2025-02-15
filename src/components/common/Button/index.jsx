@@ -23,7 +23,7 @@ const Button = ({
     const _variant = getVariant(variant);
     const _size = getSize(size);
     const _rounded = rounded ? 'rounded-[5.625rem]' : 'rounded-md';
-    const _className = `min-w-36 font-nueue font-medium cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
+    const _className = `min-w-36 font-nueue font-semibold cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
 
     return (
         <button className={_className}>
@@ -51,7 +51,7 @@ function getVariant(variant = 'primary') {
  */
 function getSize(size = 'base') {
     switch (size) {
-        case 'lg': return 'text-base-2x !px-16 !py-6';
+        case 'lg': return 'text-base-2x !px-18 !py-8';
         case 'md': return 'text-lg !px-10 !py-4';
         case 'base': return 'text-lg !px-3 !py-1.5';
         default: return 'text-lg !px-3 !py-1.5';

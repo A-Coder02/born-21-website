@@ -13,7 +13,7 @@ import React from 'react'
 const Section = ({ children = null, sectionClassName = '', containerClassName = '' }) => {
     return (
         <section className={`w-full ${sectionClassName}`} >
-            <div className={`${containerClassName} !mx-auto max-w-[75rem]`} >
+            <div className={`${containerClassName} !px-8 !mx-auto max-w-[120rem]`} >
                 {children}
             </div >
         </section >
