@@ -10,12 +10,12 @@ import React from 'react'
  * @param {React.ReactNode} [props.children=null] - Content inside the component.
  * @returns {JSX.Element} A React component with the specified typography styling.
  */
-const Typography = ({ component: Component = 'p', variant = 'base', children = null, className = "" }) => {
+const Typography = ({ component: Component = 'p', variant = 'base', children = null, className = "", style = {} }) => {
 
     const _variant = getVariant(variant);
     const _className = `${_variant} ${className}`;
 
-    return <Component className={_className}>{children}</Component>;
+    return <Component className={_className} style={style} >{children}</Component>;
 };
 
 export default Typography;
