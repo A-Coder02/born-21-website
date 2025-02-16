@@ -199,8 +199,12 @@ html {
   /* text-rendering: optimizeLegibility; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
-  line-height: 1.1;
+  line-height: 1.0 !important;
   letter-spacing: 0.1ch;
+}
+
+p {
+  line-height: 1.1;
 }
 
 
