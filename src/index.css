@@ -212,6 +212,15 @@ p {
   line-height: 1.2;
 }
 
+.accordion-item {
+  height: 0;
+  transition: height 0.4s ease-in-out;
+  interpolate-size: allow-keywords;
+}
+
+.accordion-item-active {
+  height: auto;
+}
 
 @keyframes slow-rotate {
   from {
@@ -229,7 +238,7 @@ p {
 }
 
 :root {
-  font-size: 10px;
+  font-size: 12px;
   /* Default for laptops */
 }
 
