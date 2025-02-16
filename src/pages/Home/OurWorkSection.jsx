@@ -2,7 +2,7 @@ import React from 'react'
 import Section from '../../components/layout-ui/Section'
 import Typography from '../../components/common/Typography'
 import Headline from '../../components/common/Headline'
-import Vector2Png from '../../assets/images/vector-2.png'
+import Vector2Png from '../../assets/images/Vector-2.png'
 const OurWorkSection = () => {
 
     const content = 'Our expertise spans consulting services and done-for-you solutions, enabling brands to create engaging content that resonates deeply with their audience. By building organic brand equity, we help reduce reliance on ads, boost credibility, and deliver long-term growth.'

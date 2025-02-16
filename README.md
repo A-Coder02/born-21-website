@@ -13,6 +13,7 @@ Tasks:
 - Setup ✔
 - Components
 Typography, Headline, Section, Button
+Remained - Carousel, Accordion, Button StartIcon
 - Sections
 - UI
 - Animation
