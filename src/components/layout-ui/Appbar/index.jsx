@@ -5,13 +5,16 @@ import BrandPng from '../../../assets/images/brand.png'
 import VectorPng from '../../../assets/images/vector.png'
 
 import Typography from '../../common/Typography'
+import useHeroVisibility from '../../../hooks/useHeroVisibility'
 
 const Appbar = () => {
+    const isHeroVisible = useHeroVisibility()
     return (
         <Section containerClassName='!py-16 !px-32' sectionClassName='fixed top-0 left-0 z-50' >
-            <div className="header-wrapper flex items-center justify-between">
+            <div className="header-wrapper flex items-center justify-between transition-all"
+            >
 
-                <div className="brand-wrapper flex gap-1 text-white">
+                <div className={`brand-wrapper flex gap-1 text-${isHeroVisible ? 'white' : "black"}`}>
                     <img src={BrandPng} className='w-28' alt="born-21" />
                     <span className="brand-name flex flex-col font-nohemi">
                         <span>
@@ -26,8 +29,8 @@ const Appbar = () => {
                     </span>
                 </div>
 
-                <nav className="nav-wrapper flex gap-4 items-center text-white">
-                    <Typography variant='4xl' className='font-medium cursor-pointer !pr-4 border-r border-r-white' >Menu</Typography>
+                <nav className={`nav-wrapper flex gap-4 items-center text-${isHeroVisible ? 'white' : "black"}`}>
+                    <Typography variant='4xl' className={`font-medium cursor-pointer !pr-4 border-r border-r-${isHeroVisible ? 'white' : "black"}`} >Menu</Typography>
                     <Typography
                         variant='4xl'
                         className='group font-medium  cursor-pointer  inline-flex gap-3 items-center'
