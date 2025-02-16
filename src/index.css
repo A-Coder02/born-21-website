@@ -143,6 +143,11 @@
   --color-brown-dark: #442904;
   --color-green: #0ABF8F;
   --color-green-dark: #012D26;
+  --color-warning: #F85E0B;
+  --color-warning-light: #FFEBD5;
+  --color-warning-dark: #431007;
+
+
 
   /* 16px */
   --text-base: 1rem;

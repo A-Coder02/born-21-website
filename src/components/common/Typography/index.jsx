@@ -23,6 +23,7 @@ export default Typography;
 function getVariant(variant = 'base') {
     switch (variant) {
         case 'base': return 'text-base';
+        case 'sm': return 'text-sm';
         case 'lg': return 'text-lg';
         case 'xl': return 'text-xl';
         case '2xl': return 'text-2xl';
