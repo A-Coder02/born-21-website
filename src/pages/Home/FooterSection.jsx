@@ -23,22 +23,23 @@ const FooterSection = () => {
     ]
     return (
         <Section>
-            <div className="max-w-[90rem] mx-auto">
+            <div className="max-w-[90rem] mx-auto !mb-28">
                 <div className="flex justify-between mb-9 items-center py-9 px-12 rounded-4xl bg-gray-100">
                     <Headline>{headline}</Headline>
                     <Button variant='secondary' size='md' className='!py-6 !font-medium'
                         endIcon={<img src={ButtonIcon} className='w-4 h-4' />}
                     >{ctaContent}</Button>
                 </div>
-                <div className="flex gap-8 flex-1 mb-8">
-                    <img src={BrandPng} alt="" className='flex-1 rounded-4xl' />
-                    <div className="max-w-[36.5rem] flex-1 py-9 px-12 rounded-4xl bg-gray-100">
+                <div className="grid grid-cols-2 gap-8 mb-8">
+                    <img src={BrandPng} alt="" className='rounded-4xl' />
+                    <div className="py-9 px-12 rounded-4xl bg-gray-100">
                         <Typography className='mb-8 font-semibold !font-nueue' variant='2xl' >{content}</Typography>
                         <ul className="flex flex-wrap gap-x-11 gap-y-3 list-none max-w-[22rem]">
                             {links.map(li => <Typography key={li.link} className='font-normal' >{li.title}</Typography>)}
                         </ul>
                     </div>
                 </div>
+
             </div>
             <Headline className='text-center text-[12rem] font-black' >BORN21 MEDIA</Headline>
 

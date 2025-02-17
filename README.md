@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite + Tailwind v4.x
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -11,9 +11,9 @@ Currently, two official plugins are available:
 
 Tasks:
 - Setup ✔
-- Components
+- Components ✔
 Typography, Headline, Section, Button
-Remained - Carousel, Accordion, Button StartIcon
+Remained - Carousel 🔴, Accordion, Button StartIcon
 - Sections ✔
 - UI ✔
 - Animation 🔴
