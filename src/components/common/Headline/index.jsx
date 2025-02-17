@@ -49,7 +49,7 @@ function getVariant(variant = 'h5') {
         case 'h2': return 'text-h2 font-black'; // 152px
         case 'h3': return 'text-h3 font-semibold'; // 80px
         case 'h4': return 'text-h4 font-bold'; // 66px
-        case 'h5': return 'text-h5 font-extrabold'; // 48px
+        case 'h5': return 'text-h5 font-semibold'; // 48px
         default: return 'text-h5 font-extrabold'; // 48px
     }
 }

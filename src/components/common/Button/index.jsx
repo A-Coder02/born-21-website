@@ -41,7 +41,7 @@ export default Button;
 function getVariant(variant = 'primary') {
     switch (variant) {
         case 'primary': return 'bg-primary text-black hover:bg-primary-light';
-        case 'secondary': return 'bg-info text-white hover:bg-blue-300';
+        case 'secondary': return 'bg-info-primary text-white hover:bg-blue-300';
         default: return 'bg-transparent text-info-dark hover:bg-slate-200';
     }
 }
