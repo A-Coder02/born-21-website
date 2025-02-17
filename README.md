@@ -14,17 +14,17 @@ Tasks:
 - Components
 Typography, Headline, Section, Button
 Remained - Carousel, Accordion, Button StartIcon
-- Sections
-- UI
-- Animation
+- Sections ✔
+- UI ✔
+- Animation 🔴
 - API Integration
 
 Lib for Animation: 
-- https://github.com/woofers/react-wavify#readme
+- https://github.com/woofers/react-wavify#readme ✔
 - Framer Motion
 
-SEO Opimization
-Meta Tags and Favicon
+SEO Opimization 🔴
+Meta Tags and Favicon 🔴
 Splash Screen
 Parllex Scroll
 Framer Motion
