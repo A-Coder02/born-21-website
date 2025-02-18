@@ -3,9 +3,12 @@ import Section from '../../components/layout-ui/Section'
 import Headline from '../../components/common/Headline'
 import YoutubeGraphic from '../../assets/svgs/YoutubeGraphic'
 import YTGraphic from '../../assets/images/youtube-graphic.png'
+import YTPng from '../../assets/images/youtube.png'
 import Button from '../../components/common/Button'
 import Typography from '../../components/common/Typography'
 import Wave from 'react-wavify'
+import Youtube from '../../assets/svgs/YoutubeGraphic'
+import TextLoop from '../../components/TextLoop'
 
 
 
@@ -35,16 +38,25 @@ const HeroSection = () => {
 
             <div className="relative z-10">
 
-                <div className=" hero-content-wrapper mb-24 w-fit !mx-auto text-white rounded-b-[5rem] text-center relative flex flex-col items-center">
+                <div className=" hero-content-wrapper mb-24 !mx-auto text-white rounded-b-[5rem] text-center relative flex- flex-col items-center">
                     <div className="relative mb-6">
-                        <div className="slow-spin absolute top-[-3.5rem] right-[-2.5rem]">
-                            <img src={YTGraphic} className="w-48 h-48" alt="" />
-                        </div>
 
-                        <Headline variant='h1' className='leading-[0.7]' >MORE</Headline>
-                        <Headline variant='h1' >GROWTH</Headline>
+
+                        <div className="w-fit relative mx-auto">
+                            <Headline variant='h1' className='leading-[0.7]' >MORE</Headline>
+                            <div className="absolute z-10 top-[-3.5rem]  right-[-10.5rem] w-48 h-48 grid place-content-center">
+                                <div className="slow-spin absolute w-48 h-48 top-0 right-0">
+                                    <img src={YTGraphic} className="w-48 h-48 relative" alt="" />
+                                </div>
+                                <div className="relative">
+                                    <img src={YTPng} className="w-32 h-32" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        {/* <Headline variant='h1' >GROWTH</Headline> */}
+                        <TextLoop texts={['VIEWS', 'ENGAGEMENT', 'GROWTH',]} />
                     </div>
-                    <Button variant='primary' size='lg' >Start your journey</Button>
+                    <Button variant='primary' size='lg' className='mx-auto' >Start your journey</Button>
                 </div>
                 <div className="pb-16 flex justify-between items-center text-white">
 

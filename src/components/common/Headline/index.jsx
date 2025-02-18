@@ -9,13 +9,13 @@ import React from 'react';
  * @param {React.ReactNode} [props.children=null] - Content inside the component.
  * @returns {JSX.Element} A React component with the specified Headline styling.
  */
-const Headline = ({ variant = 'h5', children = null, className = "" }) => {
+const Headline = ({ variant = 'h5', children = null, className = "", style = {} }) => {
 
     const Component = getComponent(variant);
     const _variant = getVariant(variant);
     const _className = `font-nohemi ${_variant} ${className}`;
 
-    return <Component className={_className}>{children}</Component>;
+    return <Component className={_className} style={style}>{children}</Component>;
 };
 
 export default Headline;
