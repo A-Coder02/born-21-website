@@ -30,7 +30,7 @@ const Appbar = () => {
                 </div>
 
                 <nav className={`nav-wrapper flex gap-4 items-center text-${isHeroVisible ? 'white' : "black"}`}>
-                    <Typography variant='4xl' className={`font-medium cursor-pointer !pr-4 border-r border-r-${isHeroVisible ? 'white' : "black"}`} >Menu</Typography>
+                    {/* <Typography variant='4xl' className={`font-medium cursor-pointer !pr-4 border-r border-r-${isHeroVisible ? 'white' : "black"}`} >Menu</Typography> */}
                     <Typography
                         variant='4xl'
                         className='group font-medium  cursor-pointer  inline-flex gap-3 items-center'

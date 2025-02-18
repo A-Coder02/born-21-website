@@ -44,9 +44,9 @@ const HeroSection = () => {
 
                         <div className="w-fit relative mx-auto">
                             <Headline variant='h1' className='leading-[0.7]' >MORE</Headline>
-                            <div className="absolute z-10 top-[-3.5rem]  right-[-10.5rem] w-48 h-48 grid place-content-center">
-                                <div className="slow-spin absolute w-48 h-48 top-0 right-0">
-                                    <img src={YTGraphic} className="w-48 h-48 relative" alt="" />
+                            <div className="absolute z-10 top-[-5.5rem]  right-[-11.5rem] w-52 h-52 grid place-content-center">
+                                <div className="slow-spin absolute w-52 h-52w-52 top-0 right-0">
+                                    <img src={YTGraphic} className="w-52 h-52 relative" alt="" />
                                 </div>
                                 <div className="relative">
                                     <img src={YTPng} className="w-32 h-32" alt="" />

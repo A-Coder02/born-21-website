@@ -234,7 +234,7 @@ p {
 }
 
 .slow-spin {
-  animation: slow-rotate 10s linear infinite !important;
+  animation: slow-rotate 3s linear infinite !important;
   /* Adjust duration as needed */
 }
 
