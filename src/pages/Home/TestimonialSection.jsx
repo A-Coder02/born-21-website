@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Section from '../../components/layout-ui/Section'
 import Typography from '../../components/common/Typography'
 import Headline from '../../components/common/Headline';
+// import useDragDirection from '../../hooks/useDragDirection';
 
 const TestimonialSection = () => {
     const small = 'Real Results, Real Raves';
@@ -61,12 +62,20 @@ const TestimonialSection = () => {
     ];
 
     const [index, setIndex] = useState(0);
-    const length = 3
+    const length = 3;
+
+    // const cleanup = useDragDirection(
+    //     "carousel",
+    //     () => console.log("Dragged Left to Right"),
+    //     () => console.log("Dragged Right to Left")
+    // );
+
+
 
     return (
         <Section>
             <div className="bg-warning-dark px-4 pt-28 pb-16 rounded-[3.2rem] mb-28 overflow-x-hidden">
-                <div className="max-w-[56rem] mx-auto">
+                <div className="max-w-[56rem] mx-auto" id='carousel'>
                     <Typography variant='lg' className='text-white mb-8 bg-warning py-3 px-12 text-center rounded-4xl max-w-fit mx-auto uppercase font-medium' >{small}</Typography>
                     <Headline className='text-warning-light text-center mb-16' >{headline}</Headline>
                     <div className="relative flex gap-9 overflow-x-hidden- mb-20">
@@ -75,7 +84,6 @@ const TestimonialSection = () => {
                                 left: `-${(_index || 1) * 384 * index}px`,
                                 left: `-${index * 384}px`,
                                 position: 'relative',
-                                transition: '1000ms',
                             }}
                                 className={`relative`} key={card.id} card={card} />
                         )}
@@ -93,7 +101,7 @@ const TestimonialCard = ({ card, className = '', style = null }) => {
 
     console.log({ style })
 
-    return <article style={style} className={`bg-warning-light py-5 px-8 rounded-4xl flex-[0_0_24rem] min-h-96 ${className}`}>
+    return <article style={style} className={`bg-warning-light py-5 px-8 rounded-4xl flex-[0_0_24rem] min-h-96 ${className} transition-all duration-[1000ms] ease-[cubic-bezier(0.25,1.25,0.5,1)]`}>
         <Typography component={'div'} className='h-20 text-[5rem] font-black text-warning' >“</Typography>
         <Typography className='font-medium text-warning mb-3'>{card.title}</Typography>
         <Typography variant='sm' className='mb-4'>{card.content}</Typography>
