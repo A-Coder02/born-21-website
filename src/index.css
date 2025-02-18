@@ -207,6 +207,7 @@ html {
   /* -moz-osx-font-smoothing: grayscale; */
   line-height: 1.0 !important;
   letter-spacing: 0.1ch;
+  cursor: default;
 }
 
 p {

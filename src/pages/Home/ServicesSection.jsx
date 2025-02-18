@@ -4,6 +4,7 @@ import Headline from '../../components/common/Headline'
 import Typography from '../../components/common/Typography'
 
 import CheckIconPng from '../../assets/images/check-icon.png'
+import CheckIconPng2 from '../../assets/images/check-icon-2.png'
 import Button from '../../components/common/Button'
 
 const ServicesSection = () => {
@@ -14,6 +15,7 @@ const ServicesSection = () => {
         {
             id: 1,
             title: 'Done-For-You (DFY)',
+            small: 'Full Youtube Management',
             lead: 'We handle everything—so you can focus on your business',
             list: [
                 'Full post-production for long-form content',
@@ -26,11 +28,14 @@ const ServicesSection = () => {
             ],
             ctxText: 'Hand Over the Reins',
             bgColor: '#00916E',
-            uiColor: '#D0FBE8'
+            uiColor: '#D0FBE8',
+            icon: CheckIconPng,
+
         },
         {
             id: 2,
             title: 'Done-With-You (DWY)',
+            small: 'Learn Youtube magic from us',
             lead: 'We guide your team to create high-performing content',
             list: [
                 'Bi-weekly strategy sessions',
@@ -43,7 +48,8 @@ const ServicesSection = () => {
             ],
             ctxText: 'Power Up Your Team',
             bgColor: '#E30090',
-            uiColor: '#FFE2FB'
+            uiColor: '#FFE2FB',
+            icon: CheckIconPng2,
         },
     ]
 
@@ -67,34 +73,44 @@ const ServicesSection = () => {
 export default ServicesSection
 
 const ServiceCard = ({ card }) => {
-    return <div className="text-white flex-1 p-7 rounded-4xl" style={{
-        backgroundColor: card.bgColor
-    }}>
-        <div className="flex gap-3 mb-5">
-            <div className={`w-6 h-6 rounded-full`} style={{
-                backgroundColor: card.uiColor
-            }}></div>
-            <div className={`w-6 h-6 rounded-full`} style={{
-                backgroundColor: card.uiColor
-            }}></div>
-            <div className={`w-6 h-6 rounded-full`} style={{
-                backgroundColor: card.uiColor
-            }}></div>
+    return <div className="relative group">
+        <div className="flex-1 p-7 pb-36 transition-all duration-500 rounded-4xl absolute w-full top-0 group-hover:top-[-4.5rem]"
+            style={{
+                backgroundColor: card.uiColor,
+                color: card.bgColor
+            }}
+        >
+            <Typography variant='xl' className='font-medium' >{card.small}</Typography>
         </div>
+        <div className="text-white flex-1 p-7 rounded-4xl relative" style={{
+            backgroundColor: card.bgColor
+        }}>
+            <div className="flex gap-3 mb-5">
+                <div className={`w-6 h-6 rounded-full`} style={{
+                    backgroundColor: card.uiColor
+                }}></div>
+                <div className={`w-6 h-6 rounded-full`} style={{
+                    backgroundColor: card.uiColor
+                }}></div>
+                <div className={`w-6 h-6 rounded-full`} style={{
+                    backgroundColor: card.uiColor
+                }}></div>
+            </div>
 
-        <Typography variant='5xl' className='font-medium mb-5' >{card.title}</Typography>
-        <Typography variant='lg' className='font-medium mb-6' >{card.lead}</Typography>
-        <ul className="flex flex-col gap-4 mb-6" type='none' >
-            {
-                card.list.map((li, index) =>
-                    <li key={index} className="flex items-center gap-2">
-                        <img src={CheckIconPng} alt="" className='w-5 h-5' />
-                        <Typography variant='base' className='font-medium' >{li}</Typography>
-                    </li>
-                )
-            }
+            <Typography variant='5xl' className='font-medium mb-5' >{card.title}</Typography>
+            <Typography variant='lg' className='font-medium mb-6' >{card.lead}</Typography>
+            <ul className="flex flex-col gap-4 mb-6" type='none' >
+                {
+                    card.list.map((li, index) =>
+                        <li key={index} className="flex items-center gap-2">
+                            <img src={card.icon} alt="" className='w-5 h-5' />
+                            <Typography variant='base' className='font-medium' >{li}</Typography>
+                        </li>
+                    )
+                }
 
-        </ul>
-        <Button size='md' rounded={false} className='w-full !py-3' >{card.ctxText}</Button>
+            </ul>
+            <Button size='md' rounded={false} className='w-full !py-3' >{card.ctxText}</Button>
+        </div>
     </div>
 }

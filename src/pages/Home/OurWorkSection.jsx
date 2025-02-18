@@ -74,12 +74,12 @@ export default OurWorkSection;
 const WorkSectionCard = ({
     headline, small, lead, primaryColor = 'red', primaryLightColor = 'tomato', secondaryColor = 'black', batchTextColor = 'blue'
 }) => {
-    return <article className={`rounded-[3.125rem] py-11 px-14 aspect-video`}
+    return <article className={`rounded-[3.125rem] py-11 px-14 aspect-video flex flex-col gap-12`}
         style={{
             backgroundColor: secondaryColor
         }}
     >
-        <div className="article-header flex justify-between items-center mb-12">
+        <div className="article-header flex justify-between items-center">
             <div className={`rounded-4xl px-6 py-3 text-center text-black`}
                 style={{
                     backgroundColor: primaryColor
@@ -111,9 +111,9 @@ const WorkSectionCard = ({
                 ></div>
             </div>
         </div>
-        <Headline variant='h4' className='text-white mb-4 max-w-[35rem]' >{headline}</Headline>
+        <Headline variant='h4' className='text-white max-w-[35rem]' >{headline}</Headline>
 
-        <div className="flex justify-between items-end">
+        <div className="flex justify-between items-end mt-auto">
             <Typography variant='xl' className='max-w-[29rem] text-white'>
                 {lead}
             </Typography>
