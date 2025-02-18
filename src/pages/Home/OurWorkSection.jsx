@@ -47,17 +47,19 @@ const OurWorkSection = () => {
                 <div className="flex  justify-end mb-28">
                     <Typography variant='lg' className='max-w-[30rem]' >{content}</Typography>
                 </div>
-                <div className="flex flex-col gap-16">
+                <div className="flex flex-col gap-16 min-h-screen">
                     {cardContent.map(card =>
-                        <WorkSectionCard
-                            headline={card.headline}
-                            small={card.small}
-                            lead={card.lead}
-                            primaryColor={card.primaryColor}
-                            primaryLightColor={card.primaryLightColor}
-                            secondaryColor={card.secondaryColor}
-                            batchTextColor={card.batchTextColor}
-                        />
+                        <div className="sticky top-28">
+                            <WorkSectionCard
+                                headline={card.headline}
+                                small={card.small}
+                                lead={card.lead}
+                                primaryColor={card.primaryColor}
+                                primaryLightColor={card.primaryLightColor}
+                                secondaryColor={card.secondaryColor}
+                                batchTextColor={card.batchTextColor}
+                            />
+                        </div>
                     )}
                 </div>
 
@@ -72,7 +74,7 @@ export default OurWorkSection;
 const WorkSectionCard = ({
     headline, small, lead, primaryColor = 'red', primaryLightColor = 'tomato', secondaryColor = 'black', batchTextColor = 'blue'
 }) => {
-    return <article className={`rounded-[3.125rem] py-11 px-14`}
+    return <article className={`rounded-[3.125rem] py-11 px-14 aspect-video`}
         style={{
             backgroundColor: secondaryColor
         }}
