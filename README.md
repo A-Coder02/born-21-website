@@ -22,8 +22,9 @@ Remained - Carousel , Accordion, Button StartIcon ✔
 
 Page
 - Home Page ✔
-- Services Page
-
+- Services Page 🔴
+(Icons, Formik)
+- Not Found
 Lib for Animation: 
 - https://github.com/woofers/react-wavify#readme ✔
 - Framer Motion
@@ -32,3 +33,6 @@ Meta Tags and Favicon ✔
 Splash Screen
 Parllex Scroll
 Framer Motion
+
+Issues:
+Header Animatin, do bg white when scroll

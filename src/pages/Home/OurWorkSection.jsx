@@ -3,6 +3,8 @@ import Section from '../../components/layout-ui/Section'
 import Typography from '../../components/common/Typography'
 import Headline from '../../components/common/Headline'
 import Vector2Png from '../../assets/images/Vector-2.png'
+import services from '../../data/services'
+import { useNavigate, useNavigation } from 'react-router-dom'
 const OurWorkSection = () => {
 
     const content = 'Our expertise spans consulting services and done-for-you solutions, enabling brands to create engaging content that resonates deeply with their audience. By building organic brand equity, we help reduce reliance on ads, boost credibility, and deliver long-term growth.'
@@ -39,6 +41,7 @@ const OurWorkSection = () => {
 
         },
     ]
+    const cardList = services
 
     return (
         <Section>
@@ -47,16 +50,17 @@ const OurWorkSection = () => {
                     <Typography variant='lg' className='max-w-[30rem]' >{content}</Typography>
                 </div>
                 <div className="flex flex-col gap-16 min-h-screen">
-                    {cardContent.map(card =>
-                        <div className="sticky top-28">
+                    {cardList.map((card, index) =>
+                        <div className="sticky top-28" key={card.id}>
                             <WorkSectionCard
                                 headline={card.headline}
                                 small={card.small}
-                                lead={card.lead}
-                                primaryColor={card.primaryColor}
-                                primaryLightColor={card.primaryLightColor}
-                                secondaryColor={card.secondaryColor}
-                                batchTextColor={card.batchTextColor}
+                                lead={card.leadContent}
+                                theme={card.theme}
+                            // primaryColor={card.primaryColor}
+                            // primaryLightColor={card.primaryLightColor}
+                            // secondaryColor={card.secondaryColor}
+                            // batchTextColor={card.batchTextColor}
                             />
                         </div>
                     )}
@@ -71,22 +75,24 @@ const OurWorkSection = () => {
 export default OurWorkSection;
 
 const WorkSectionCard = ({
-    headline, small, lead, primaryColor = 'red', primaryLightColor = 'tomato', secondaryColor = 'black', batchTextColor = 'blue'
+    theme, headline, small, lead,
 }) => {
-    return <article className={`rounded-[3.125rem] py-11 px-14 aspect-video flex flex-col gap-12`}
+    const navigate = useNavigate()
+    console.log({ navigate })
+    return <article className={`rounded-[3.125rem] py-11 px-14 aspect-video flex flex-col gap-12 bg-${theme.bgColor}`}
         style={{
-            backgroundColor: secondaryColor
+            // backgroundColor: secondaryColor
         }}
     >
         <div className="article-header flex justify-between items-center">
-            <div className={`rounded-4xl px-6 py-3 text-center text-black`}
+            <div className={`rounded-4xl px-6 py-3 text-center bg-${theme.primary.light}`}
                 style={{
-                    backgroundColor: primaryColor
+                    // backgroundColor: primaryColor
                 }}
             >
-                <Typography variant='base' className='font-medium'
+                <Typography variant='base' className={`font-medium text-${theme.batchTextColor}`}
                     style={{
-                        color: batchTextColor
+                        // color: batchTextColor
                     }}
                 >
                     {small}
@@ -94,20 +100,8 @@ const WorkSectionCard = ({
             </div>
 
             <div className="flex gap-3">
-                <div className={`w-6 h-6 rounded-full`}
-                    style={{
-                        backgroundColor: primaryLightColor
-                    }}
-                ></div>
-                <div className={`w-6 h-6 rounded-full`}
-                    style={{
-                        backgroundColor: primaryLightColor
-                    }}
-                ></div>     <div className={`w-6 h-6 rounded-full`}
-                    style={{
-                        backgroundColor: primaryLightColor
-                    }}
-                ></div>
+                {new Array(3).fill().map(el => <div className={`w-6 h-6 rounded-full bg-${theme.primary.light}`} />)}
+
             </div>
         </div>
         <Headline variant='h4' className='text-white max-w-[35rem]' >{headline}</Headline>
@@ -116,7 +110,7 @@ const WorkSectionCard = ({
             <Typography variant='xl' className='max-w-[29rem] text-white'>
                 {lead}
             </Typography>
-            <div className="text-white flex items-center gap-2 cursor-pointer group">
+            <div className="text-white flex items-center gap-2 cursor-pointer group" onClick={() => navigate(`/services/${small}`)} >
                 <Typography variant='' className='' >Read Case Study</Typography>
                 <img src={Vector2Png} alt="" className='w-3.5 relative left-0 group-hover:left-1 transition-all' />
             </div>

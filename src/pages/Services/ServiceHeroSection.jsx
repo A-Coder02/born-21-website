@@ -13,14 +13,10 @@ const ServiceHeroSection = ({ card }) => {
                     <Chip card={card} />
                     <Headline variant='h3' className='mb-4' >{card.headline}</Headline>
                     <Typography variant='3xl' className='mb-9'>{card.leadContent}</Typography>
-                    <Typography variant='3xl' className='font-medium mb-8' style={{
-                        color: card.theme.primary.light
-                    }} >Key Takeaways</Typography>
+                    <Typography variant='3xl' className={`font-medium mb-8 text-${card.theme.primary.light}`} >Key Takeaways</Typography>
                     <ul className='list-none mb-9' >
                         {card.list.map((li, index) => <li className='flex gap-4 mb-9' >
-                            <Typography component={'span'} variant='lg' className='font-medium w-10 h-10 aspect-square bg-black rounded-full grid place-content-center' style={{
-                                backgroundColor: card.theme.primary.DEFAULT
-                            }} >
+                            <Typography component={'span'} variant='lg' className={`font-medium w-10 h-10 aspect-square rounded-full grid place-content-center bg-${card.theme.primary.DEFAULT} text-${card.theme.batchTextColor}`}>
                                 {index + 1}
                             </Typography>
 
@@ -41,15 +37,9 @@ const ServiceHeroSection = ({ card }) => {
 
 export default ServiceHeroSection;
 
-const Chip = ({ card }) => <div className={`w-fit rounded-4xl px-6 py-3 text-center text-black mb-10`}
-    style={{
-        backgroundColor: card.theme.primary.light
-    }}
+const Chip = ({ card }) => <div className={`w-fit rounded-4xl px-6 py-3 text-center bg-${card.theme.primary.light} mb-10`}
 >
-    <Typography variant='base' className='font-medium'
-        style={{
-            color: card.theme.batchTextColor
-        }}
+    <Typography variant='base' className={`font-medium text-${card.theme.batchTextColor}`}
     >
         {card.small}
     </Typography>

@@ -154,6 +154,7 @@
   --color-pink: #BB0076;
   --color-blue-light: #D6F5FF;
   --color-blue: #086AC5;
+  --color-blue-2: #0D5B9B;
 
 
 
@@ -214,7 +215,7 @@ html {
   /* text-rendering: optimizeLegibility; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
-  line-height: 1.2 !important;
+  line-height: 1.1 !important;
   letter-spacing: 0.15ch;
   cursor: default;
 }

@@ -32,7 +32,11 @@ export default ServiceDetailsSection;
 const ServiceDetailCard = ({ card, index }) =>
     <li className={`rounded-3xl py-12 px-12 flex flex-col gap-7 ${cardTheme[index].bgColor} ${cardTheme[index].textColor}`}>
         <img src={card.icon} className='h-20 object-contain object-left' alt="" />
-        <Headline variant='h5' className='!font-bold !text-6xl'>{card.title}</Headline>
+        <div className="">
+            {card.title && <Headline variant='h5' className='!font-bold !text-6xl'>{card.title}</Headline>}
+            {card.headline && <Headline variant='h3' className='!font-bold'>{card.headline}</Headline>}
+            {card.small && <Typography variant='5xl' className='!font-bold'>{card.small}</Typography>}
+        </div>
         <Typography variant='2xl' className='text-black' >{card.lead}</Typography>
     </li>
 

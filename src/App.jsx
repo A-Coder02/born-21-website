@@ -15,7 +15,7 @@ const App = () => {
           index: true, element: <Home />
         },
         {
-          path: 'services/', element: <Services />
+          path: 'services/:title', element: <Services />
         }
       ]
     }

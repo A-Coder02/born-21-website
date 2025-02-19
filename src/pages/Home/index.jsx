@@ -8,6 +8,7 @@ import FaqSection from './FaqSection'
 import FooterSection from './FooterSection'
 
 const Home = () => {
+
     return (
         <main className='' >
             <HeroSection />
