@@ -4,7 +4,7 @@ import React from 'react';
  * Headline component for rendering text with Tailwind variants.
  * 
  * @param {Object} props - Component properties.
- * @param {'h1' | 'h2' | 'h3' | 'h4' | 'h5'} [props.variant="h5"] - Tailwind text size variant.
+ * @param {'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'} [props.variant="h5"] - Tailwind text size variant.
  * @param {string} [props.className=""] - Additional CSS classes for styling.
  * @param {React.ReactNode} [props.children=null] - Content inside the component.
  * @returns {JSX.Element} A React component with the specified Headline styling.
@@ -23,7 +23,7 @@ export default Headline;
 /**
  * Maps variant to a corresponding HTML tag.
  * 
- * @param {'h1' | 'h2' | 'h3' | 'h4' | 'h5'} variant 
+ * @param {'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'} variant 
  * @returns {keyof JSX.IntrinsicElements} HTML tag
  */
 function getComponent(variant) {
@@ -33,6 +33,7 @@ function getComponent(variant) {
         case 'h3': return 'h3';
         case 'h4': return 'h4';
         case 'h5': return 'h5';
+        case 'h6': return 'h6';
         default: return 'h5';
     }
 }
@@ -40,7 +41,7 @@ function getComponent(variant) {
 /**
  * Maps variant to Tailwind text styles.
  * 
- * @param {'h1' | 'h2' | 'h3' | 'h4' | 'h5'} variant 
+ * @param {'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'} variant 
  * @returns {string} Tailwind classes
  */
 function getVariant(variant = 'h5') {
@@ -50,6 +51,7 @@ function getVariant(variant = 'h5') {
         case 'h3': return 'text-h3 font-semibold'; // 80px
         case 'h4': return 'text-h4 font-bold'; // 66px
         case 'h5': return 'text-h5 font-semibold'; // 48px
+        case 'h6': return 'text-h6 font-semibold'; // 36px
         default: return 'text-h5 font-extrabold'; // 48px
     }
 }

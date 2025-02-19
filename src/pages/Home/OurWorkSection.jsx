@@ -26,12 +26,11 @@ const OurWorkSection = () => {
             primaryLightColor: '#D6F5FF',
             secondaryColor: '#0E375D',
             batchTextColor: 'white',
-
         },
         {
             id: 3,
             headline: '937% Watch-Time Surge',
-            small: 'Finance',
+            small: 'Finance Case Study',
             lead: 'How we grew a niche finance channel from 571K to 3.2M views in just 4 months',
             primaryColor: '#0ABF8F',
             primaryLightColor: '#D0FBE8',

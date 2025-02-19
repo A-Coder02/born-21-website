@@ -23,7 +23,7 @@ const HeroSection = () => {
     const content = `Strategy to execution, we handle everything to scale your YouTube with data-driven content and proven results`
 
     return (
-        <Section id='hero-section' containerClassName='!pt-52 overflow-hidden relative !px-32 bg-[#008CFF] rounded-b-[5rem]' >
+        <Section id='hero-section' containerClassName='pt-52 overflow-hidden relative px-32 bg-[#008CFF] rounded-b-[5rem]' >
 
             <Wave fill='#069FFF'
                 paused={false}

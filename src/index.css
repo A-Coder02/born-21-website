@@ -142,11 +142,18 @@
   --color-info-primary: #008CFF;
   --color-info-dark: #0E375D;
   --color-brown-dark: #442904;
+  --color-green-light: #D0FBE8;
   --color-green: #0ABF8F;
   --color-green-dark: #012D26;
+  --color-green-dark-2: #007C62;
   --color-warning: #F85E0B;
   --color-warning-light: #FFEBD5;
   --color-warning-dark: #431007;
+
+  --color-pink-light: #FFE2FB;
+  --color-pink: #BB0076;
+  --color-blue-light: #D6F5FF;
+  --color-blue: #086AC5;
 
 
 
@@ -179,6 +186,8 @@
   --text-h4: 4.125rem;
   /* 48px */
   --text-h5: 3rem;
+  /* 36px */
+  --text-h6: 2.25rem;
 
   --font-nohemi: 'Nohemi';
   --font-nueue: 'NeueHaasDisplay';
@@ -205,8 +214,8 @@ html {
   /* text-rendering: optimizeLegibility; */
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
-  line-height: 1.0 !important;
-  letter-spacing: 0.1ch;
+  line-height: 1.2 !important;
+  letter-spacing: 0.15ch;
   cursor: default;
 }
 

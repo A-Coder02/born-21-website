@@ -6,6 +6,7 @@ import React from 'react';
  * @param {Object} props - Component properties.
  * @param {'primary' | 'secondary'} [props.variant="primary"] - Button style variant.
  * @param {'lg' | 'md' | 'base'} [props.size="base"] - Button size.
+ * @param {'button' | 'submit'} [props.type="button"] - Button type.
  * @param {boolean} [props.rounded=true] - Whether the button is rounded.
  * @param {string} [props.className=""] - Additional CSS classes for styling.
  * @param {React.ReactNode} [props.children=null] - Button content.
@@ -18,7 +19,8 @@ const Button = ({
     rounded = true,
     className = "",
     children = null,
-    endIcon = null
+    endIcon = null,
+    type = 'button'
 }) => {
     const _variant = getVariant(variant);
     const _size = getSize(size);
@@ -26,7 +28,7 @@ const Button = ({
     const _className = `min-w-36 font-nueue font-semibold cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
 
     return (
-        <button className={_className}>
+        <button className={_className} type={type}>
             {children}
             {endIcon && <span className="flex items-center">{endIcon}</span>}
         </button>
