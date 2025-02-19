@@ -12,19 +12,23 @@ Currently, two official plugins are available:
 Tasks:
 - Setup ✔
 - Components ✔
-Typography, Headline, Section, Button
-Remained - Carousel 🔴, Accordion, Button StartIcon
+Typography, Headline, Section, Button ✔
+Remained - Carousel , Accordion, Button StartIcon ✔
 - Sections ✔
 - UI ✔
-- Animation 🔴
+- Animation ✔
 - API Integration
+- Node Mailer
+
+Page
+- Home Page ✔
+- Services Page
 
 Lib for Animation: 
 - https://github.com/woofers/react-wavify#readme ✔
 - Framer Motion
 
-SEO Opimization 🔴
-Meta Tags and Favicon 🔴
+Meta Tags and Favicon ✔
 Splash Screen
 Parllex Scroll
 Framer Motion
