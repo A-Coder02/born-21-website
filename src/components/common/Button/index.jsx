@@ -20,7 +20,8 @@ const Button = ({
     className = "",
     children = null,
     endIcon = null,
-    type = 'button'
+    type = 'button',
+    onClick = () => { }
 }) => {
     const _variant = getVariant(variant);
     const _size = getSize(size);
@@ -28,7 +29,7 @@ const Button = ({
     const _className = `min-w-36 font-nueue font-semibold cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
 
     return (
-        <button className={_className} type={type}>
+        <button className={_className} type={type} onClick={onClick}>
             {children}
             {endIcon && <span className="flex items-center">{endIcon}</span>}
         </button>

@@ -24,10 +24,12 @@ Page
 - Home Page ✔
 - Services Page 🔴
 (Icons, Formik)
-- Not Found
+- Not Found ✔
 Lib for Animation: 
 - https://github.com/woofers/react-wavify#readme ✔
 - Framer Motion
+
+Responsiveness for Mobile
 
 Meta Tags and Favicon ✔
 Splash Screen
