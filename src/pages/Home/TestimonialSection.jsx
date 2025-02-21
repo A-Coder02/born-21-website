@@ -3,6 +3,7 @@ import Section from '../../components/layout-ui/Section'
 import Typography from '../../components/common/Typography'
 import Headline from '../../components/common/Headline';
 import testimonials from '../../data/testimonials';
+import Carousel from '../../components/layout-ui/carousel/Carousel';
 // import useDragDirection from '../../hooks/useDragDirection';
 
 const TestimonialSection = ({
@@ -25,24 +26,28 @@ const TestimonialSection = ({
 
     const { small, headline, list } = testimonials
 
+    // return <Carousel />
+
     return (
         <Section>
             <div className={`${theme.bgClassName} px-4 pt-28 pb-16 rounded-[3.2rem] mb-28 overflow-x-hidden`}>
                 <div className="max-w-[56rem] mx-auto" id='carousel'>
                     <Typography variant='lg' className={`${theme.chipClassName} mb-8 py-3 px-12 text-center rounded-4xl max-w-fit mx-auto uppercase font-medium`} >{small}</Typography>
                     <Headline className={`${theme.headlineClassName} text-center !font-bold mb-16`} >{headline}</Headline>
-                    <div className="relative flex gap-9 overflow-x-hidden- mb-20">
-                        {list.map((card, _index) =>
-                            <TestimonialCard theme={theme} style={{
-                                // left: `-${(_index || 1) * 384 * index}px`,
-                                left: `-${index * 420 / 16}rem`,
-                                position: 'relative',
-                            }}
-                                className={`relative`} key={card.id} card={card} />
-                        )}
-                    </div>
-                    <CarouselSlider sliderClassName={theme.sliderClassName} length={length} index={index} onClick={setIndex} />
                 </div>
+
+                <Carousel theme={theme} list={list} />
+                {/* <div className="relative flex gap-9 overflow-x-hidden- mb-20">
+                    {list.map((card, _index) =>
+                        <TestimonialCard theme={theme} style={{
+                            // left: `-${(_index || 1) * 384 * index}px`,
+                            left: `-${index * 420 / 16}rem`,
+                            position: 'relative',
+                        }}
+                            className={`relative`} key={card.id} card={card} />
+                    )}
+                </div> */}
+                {/* <CarouselSlider sliderClassName={theme.sliderClassName} length={length} index={index} onClick={setIndex} /> */}
             </div>
         </Section>
     )
