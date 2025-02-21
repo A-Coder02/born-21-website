@@ -4,6 +4,8 @@ import Headline from '../../components/common/Headline'
 import Typography from '../../components/common/Typography'
 import Button from '../../components/common/Button'
 
+import Svg from '../../assets/svgs/personal-care/pc-1.svg'
+
 const ServiceDetailsSection = ({ details, theme = {} }) => {
 
     const subHeadline = 'Want These Results for Your Brand?';
@@ -35,6 +37,8 @@ export default ServiceDetailsSection;
 
 const ServiceDetailCard = ({ card, index }) =>
     <li className={`rounded-3xl py-12 px-12 flex flex-col gap-7 ${cardTheme[index].bgColor} ${cardTheme[index].textColor}`}>
+        {/* {Svg} */}
+        {console.log({ p: card.icon })}
         <img src={card.icon} className='h-20 object-contain object-left' alt="" />
         <div className="">
             {card.title && <Headline variant='h5' className='!font-bold !text-6xl'>{card.title}</Headline>}

@@ -1,3 +1,19 @@
+// Svgs
+import PC1Svg from '../assets/svgs/personal-care/pc-1.svg';
+import PC2Svg from '../assets/svgs/personal-care/pc-2.svg';
+import PC3Svg from '../assets/svgs/personal-care/pc-3.svg';
+import PC4Svg from '../assets/svgs/personal-care/pc-4.svg';
+
+import HC1Svg from '../assets/svgs/health-care/hc-1.svg';
+import HC2Svg from '../assets/svgs/health-care/hc-2.svg';
+import HC3Svg from '../assets/svgs/health-care/hc-3.svg';
+import HC4Svg from '../assets/svgs/health-care/hc-4.svg';
+
+import FC1Svg from '../assets/svgs/finance-care/fc-1.svg';
+import FC2Svg from '../assets/svgs/finance-care/fc-2.svg';
+import FC3Svg from '../assets/svgs/finance-care/fc-3.svg';
+import FC4Svg from '../assets/svgs/finance-care/fc-4.svg';
+
 const services = [
     {
         id: 1,
@@ -16,10 +32,10 @@ const services = [
         headline: '363% more views in 90 days',
         leadContent: 'How we transformed a personal care brand’s YouTube channel',
         list: [
-            { id: 1, title: 'Lead with Value', lead: 'Hook viewers in the first 10 seconds' },
-            { id: 2, title: 'Test & Iterate', lead: 'A/B test thumbnails, titles & video structure' },
-            { id: 3, title: 'Diversify Content', lead: 'Don’t just do product demos; add value-driven content' },
-            { id: 4, title: 'Move Fast', lead: 'Adjust underperforming videos instead of letting them fade' },
+            { id: 1, title: 'Lead with Value', lead: 'Hook viewers in the first 10 seconds', },
+            { id: 2, title: 'Test & Iterate', lead: 'A/B test thumbnails, titles & video structure', },
+            { id: 3, title: 'Diversify Content', lead: 'Don’t just do product demos; add value-driven content', },
+            { id: 4, title: 'Move Fast', lead: 'Adjust underperforming videos instead of letting them fade', },
         ],
         // About Section
         about: {
@@ -32,25 +48,25 @@ const services = [
             headlineHighlightSmall: 'Breakthrough',
             list: [
                 {
-                    // icon: SampleIcon,
+                    icon: PC1Svg,
                     headline: '363%',
                     small: 'increase in views',
                     lead: 'Achieved by combining strategic titles, sharper hooks, and consistent design elements that drew clicks'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: PC2Svg,
                     headline: '463%',
                     small: 'growth in watch time',
                     lead: 'Minimizing “intro fluff” and highlighting the core value early kept viewers engaged'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: PC3Svg,
                     headline: '814%',
                     small: 'hike in YouTube ad revenue',
                     lead: 'Extended watch time + higher CTR + more videos served = substantial monetization uplift'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: PC4Svg,
                     headline: '392%',
                     small: 'rise in subscriber count',
                     lead: 'With extended watch times and more viewer conversions, AdSense revenue and potential product leads increased significantly'
@@ -106,22 +122,22 @@ const services = [
             headlineHighlightSmall: 'Leading Voice',
             list: [
                 {
-                    // icon: SampleIcon,
+                    icon: HC1Svg,
                     title: 'Exponential Channel Growth',
                     lead: 'Revived “dead” videos soared to hundreds of thousands of views, proving the long-tail potential of evergreen healthcare topics'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: HC2Svg,
                     title: 'Higher Average Views per Viewer',
                     lead: 'Jumped from 1.2 videos per session to nearly 3, indicating that viewers were binge-watching playlists'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: HC3Svg,
                     title: 'Brand & Lead Generation Lift',
                     lead: 'Although not formally tracked, the client reported a notable uptick in inquiries for their supplements and wellness products—likely influenced by the channel’s newfound visibility'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: HC4Svg,
                     title: 'Monetization Surge',
                     lead: 'With extended watch times and more viewer conversions, AdSense revenue and potential product leads increased significantly'
                 },
@@ -177,22 +193,22 @@ const services = [
             headlineHighlightSmall: 'high-growth asset.',
             list: [
                 {
-                    // icon: SampleIcon,
+                    icon: FC1Svg,
                     title: 'Unlocking a “Hidden” Audience',
                     lead: 'Proved that niche finance channels can achieve substantial new viewership when broader topics and reaction formats are introduced'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: FC2Svg,
                     title: '$5,359 to $29,081',
                     lead: 'Revenue skyrocketed—despite the client’s initial lack of focus on profitability'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: FC3Svg,
                     title: 'Dynamic Thumbnail & Title Strategy',
                     lead: 'Switching to a broader design/message after three days helped attract new eyes from YouTube’s recommended feed'
                 },
                 {
-                    // icon: SampleIcon,
+                    icon: FC4Svg,
                     title: 'Cross-Platform Success',
                     lead: 'Repurposed Shorts found viral success on Instagram and TikTok, further boosting brand visibility beyond YouTube'
                 },

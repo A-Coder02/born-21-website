@@ -23,7 +23,7 @@ Remained - Carousel , Accordion, Button StartIcon ✔
 Page
 - Home Page ✔
 - Services Page 🔴
-(Icons, Formik)
+(Icons ✔, Formik)
 - Not Found ✔
 Lib for Animation: 
 - https://github.com/woofers/react-wavify#readme ✔
