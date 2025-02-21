@@ -6,7 +6,7 @@ import ScrollToTop from './ScrollToTop'
 const LayoutWrapper = () => {
     return (
         <>
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
             <Appbar />
             <Outlet />
         </>

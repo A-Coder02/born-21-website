@@ -6,18 +6,22 @@ import ServicesSection from './ServicesSection'
 import TestimonialSection from './TestimonialSection'
 import FaqSection from './FaqSection'
 import FooterSection from './FooterSection'
+import { motion } from "framer-motion";
+import PageTransition from '../../components/layout-ui/PageTransition'
 
 const Home = () => {
 
     return (
         <main className='' >
-            <HeroSection />
-            <AboutSection />
-            <OurWorkSection />
-            <ServicesSection />
-            <TestimonialSection />
-            <FaqSection />
-            <FooterSection />
+            <PageTransition>
+                <HeroSection />
+                <AboutSection />
+                <OurWorkSection />
+                <ServicesSection />
+                <TestimonialSection />
+                <FaqSection />
+                <FooterSection />
+            </PageTransition>
         </main>
     )
 }
