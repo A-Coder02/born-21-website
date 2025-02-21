@@ -6,6 +6,7 @@ import Button from '../../components/common/Button';
 
 import ButtonIcon from '../../assets/images/Vector-2.png'
 import Accordion from '../../components/layout-ui/Accordion';
+import { calendlyUrl } from '../../utils/urls';
 
 const FaqSection = () => {
     const headline = 'Straight Answers on YouTube Growth';
@@ -45,7 +46,7 @@ const FaqSection = () => {
             <div className="flex justify-between max-w-[90rem] mx-auto mb-28">
                 <div className="max-w-[33rem]">
                     <Headline variant='h5' className='!font-medium mb-7 font-nueue' >{headline}</Headline>
-                    <Button size='md' variant='primary' className='text-black' endIcon={<img src={ButtonIcon} className='invert-100 w-4 h-4' />} >{ctaText}</Button>
+                    <Button onClick={() => window.open(calendlyUrl)} size='md' variant='primary' className='text-black' endIcon={<img src={ButtonIcon} className='invert-100 w-4 h-4' />} >{ctaText}</Button>
                 </div>
                 <ul type='none' className='w-[35rem]' >
                     {

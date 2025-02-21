@@ -7,10 +7,12 @@ import VectorPng from '../../../assets/images/vector.png'
 import Typography from '../../common/Typography'
 import useHeroVisibility from '../../../hooks/useHeroVisibility'
 import useScrollChangeAppBar from '../../../hooks/useScrollChangeAppBar'
+import { useNavigate } from 'react-router-dom'
 
 const Appbar = () => {
     // const isHeaderToggleStyles = useHeroVisibility();
     const isHeaderToggleStyles = useScrollChangeAppBar();
+    const navigate = useNavigate();
     return (
         <Section containerClassName='!py-8 !px-32' sectionClassName='fixed top-0 left-0 z-50' style={{
             backgroundColor: !isHeaderToggleStyles ? 'white' : 'transparent',
@@ -22,7 +24,7 @@ const Appbar = () => {
             >
 
                 <div className={`brand-wrapper flex gap-1 text-${isHeaderToggleStyles ? 'white' : "black"}`}>
-                    <img src={BrandPng} className='w-28' alt="born-21" />
+                    <img src={BrandPng} onClick={() => navigate('/')} className='w-28 cursor-pointer' alt="born-21" />
                     <span className="brand-name flex flex-col font-nohemi">
                         <span>
                             BORN

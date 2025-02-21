@@ -1,0 +1,1 @@
+export const calendlyUrl = ' https://calendly.com/youtubeintrocall/30min'
