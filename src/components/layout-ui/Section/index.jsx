@@ -10,9 +10,9 @@ import React from 'react'
  * @param {string} [props.containerClassName=''] - Additional CSS classes for the inner container `<div>`.
  * @returns {JSX.Element} The Section component.
  */
-const Section = ({ children = null, sectionClassName = '', containerClassName = '', id = null }) => {
+const Section = ({ style = {}, children = null, sectionClassName = '', containerClassName = '', id = null }) => {
     return (
-        <section className={`w-full ${sectionClassName}`} id={id} >
+        <section className={`w-full ${sectionClassName}`} style={style} id={id} >
             <div className={`${containerClassName} !px-8 !mx-auto max-w-[120rem]`} >
                 {children}
             </div >
