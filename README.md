@@ -30,7 +30,7 @@ Lib for Animation:
 - Framer Motion
 
 Responsiveness for Mobile
-
+SEO
 Meta Tags and Favicon ✔
 Splash Screen
 Parllex Scroll
@@ -38,3 +38,5 @@ Framer Motion
 
 Issues:
 Header Animatin, do bg white when scroll
+Accordion Issue
+Carousel Issue

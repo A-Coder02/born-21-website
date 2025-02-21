@@ -57,7 +57,7 @@ const FaqSection = () => {
                     {
                         accordionData.map((accordion, index) =>
                             <Accordion key={index}
-                                onClick={() => setActiveAccordion(index)}
+                                onClick={() => setActiveAccordion(index === activeAccordion ? null : index)}
                                 expand={index === activeAccordion}
                                 title={accordion.title} content={accordion.content} />
                         )
