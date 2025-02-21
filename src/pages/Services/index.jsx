@@ -20,7 +20,7 @@ const Services = () => {
             <PageTransition>
                 <ServiceHeroSection card={card} />
                 <ServiceAboutSection about={card.about} />
-                <ServiceDetailsSection details={card.details} />
+                <ServiceDetailsSection details={card.details} theme={card.theme} />
                 <TestimonialSection theme={card.testimonial.theme} />
                 <FooterSection headlineClassName='text-white' />
             </PageTransition>

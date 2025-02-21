@@ -27,16 +27,15 @@ Page
 - Not Found ✔
 Lib for Animation: 
 - https://github.com/woofers/react-wavify#readme ✔
-- Framer Motion
+- Framer Motion ✔
 
 Responsiveness for Mobile
-SEO
+SEO ✔
 Meta Tags and Favicon ✔
 Splash Screen
-Parllex Scroll
-Framer Motion
+Framer Motion ✔
 
 Issues:
-Header Animatin, do bg white when scroll
-Accordion Issue
-Carousel Issue
+Header Animatin, do bg white when scroll ✔
+Accordion Issue ✔
+Carousel Issue ✔

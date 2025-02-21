@@ -4,15 +4,19 @@ import Headline from '../../components/common/Headline'
 import Typography from '../../components/common/Typography'
 import Button from '../../components/common/Button'
 
-const ServiceDetailsSection = ({ details }) => {
+const ServiceDetailsSection = ({ details, theme = {} }) => {
 
     const subHeadline = 'Want These Results for Your Brand?';
     const subLead = 'At Born21 Media, we help brands scale their YouTube presence with tailored strategies that drive real growth—no fluff, just results.'
-    const subButtonContent = 'Download Case Study'
+    const subButtonContent = 'Download Case Study';
+
+    const _headline = details.headline.split(" ")
+    console.log({ _headline, theme })
     return (
         <Section>
             <div className="mx-auto max-w-[90rem] mb-24">
-                <Headline variant='h3' className='mb-28 text-center text-white' >{details.headline}</Headline>
+                {/* <Headline variant='h3' className='mb-28 text-center text-white' >{details.headline.replace(details.headlineHighlightSmall, <span className='bg-black'>{details.headlineHighlightSmall}</span>)}</Headline> */}
+                <Headline variant='h3' className='mb-28 text-center text-white flex flex-wrap gap-4 justify-center' >{_headline.map(h => details.headlineHighlightSmall.includes(h) ? <span className={``} >{h}</span> : <span>{h}</span>)}</Headline>
                 <ul className="grid grid-cols-2 gap-9 list-none">
                     {details.list.map((card, index) => <ServiceDetailCard key={index} index={index} card={card} />)}
                 </ul>
