@@ -26,7 +26,6 @@ const TestimonialSection = ({
 
     const { small, headline, list } = testimonials
 
-    // return <Carousel />
 
     return (
         <Section>
