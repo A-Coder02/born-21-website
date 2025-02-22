@@ -30,7 +30,8 @@ const TestimonialSection = ({
 
     return (
         <Section>
-            <div className={`${theme.bgClassName} px-4 pt-28 pb-8 md:pb-16 rounded-[3.2rem] md:mb-28 my-12  overflow-x-hidden`}>
+            <div className="bg-green-dark bg-green-dark-2"></div>
+            <div className={`${theme.bgClassName} px-4 pt-28 pb-8 md:pb-0 rounded-[3.2rem] md:mb-14 my-12  overflow-x-hidden`}>
                 <div className="max-w-[56rem] mx-auto" id='carousel'>
                     <div className={`${theme.chipClassName} text-sm md:text-lg mb-8 py-3 px-6 md:px-12 text-center rounded-4xl max-w-fit mx-auto uppercase font-medium`} >{small}</div>
                     <Headline className={`${theme.headlineClassName} text-center !font-bold mb-16`} >{headline}</Headline>

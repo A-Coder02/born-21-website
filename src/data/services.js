@@ -75,16 +75,16 @@ const services = [
         },
         testimonial: {
             theme: {
-                bgClassName: 'bg-blue-2',
+                bgClassName: 'bg-brown-light',
                 headlineClassName: 'text-white',
-                chipClassName: 'bg-info-primary text-white',
+                chipClassName: 'bg-primary text-black',
                 // Card
                 cardClassName: {
                     container: 'bg-white',
-                    title: 'text-blue',
+                    title: 'text-brown-light',
                 },
                 sliderClassName: {
-                    active: 'bg-info-primary',
+                    active: 'bg-primary',
                     default: 'bg-white'
                 }
             },
@@ -216,7 +216,7 @@ const services = [
         },
         testimonial: {
             theme: {
-                bgClassName: 'bg-green-dark',
+                bgClassName: 'bg-green-dark-2',
                 headlineClassName: 'text-white',
                 chipClassName: 'bg-green text-white',
                 // Card
