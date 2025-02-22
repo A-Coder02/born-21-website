@@ -8,6 +8,7 @@ import FaqSection from './FaqSection'
 import FooterSection from './FooterSection'
 import { motion } from "framer-motion";
 import PageTransition from '../../components/layout-ui/PageTransition'
+import StepsSection from './StepsSection'
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
                 <HeroSection />
                 <AboutSection />
                 <OurWorkSection />
+                <StepsSection />
                 <ServicesSection />
                 <TestimonialSection />
                 <FaqSection />
