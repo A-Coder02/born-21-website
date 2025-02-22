@@ -7,10 +7,13 @@ import CheckIconPng from '../../assets/images/check-icon.png'
 import CheckIconPng2 from '../../assets/images/check-icon-2.png'
 import Button from '../../components/common/Button'
 
+import LinkedingSvg from '../../assets/svgs/linkedin.svg'
+import { emailAddress, linkedinUrl } from '../../utils/urls'
+
 const ServicesSection = () => {
     const headline = 'Built for Long-Term YouTube Success'
     const content = 'We provide consulting and done-for-you solutions that help brands create engaging content, build organic brand equity, and reduce reliance on ads—driving credibility and sustainable growth.'
-
+    const chip = 'Strategic & Scalable'
     const contentCard = [
         {
             id: 1,
@@ -57,13 +60,36 @@ const ServicesSection = () => {
         <>
             <Section sectionClassName='bg-primary' containerClassName='md:py-28 py-12  min-h-[44rem]' >
                 <div className='max-w-[58rem] mx-auto'>
+                    <p className='bg-primary-light  mx-auto mb-8 md:text-lg rounded-4xl py-3 px-4 text-center uppercase font-medium max-w-fit md:max-w-xs' >{chip}</p>
+
                     <Headline variant='h5' className='text-center mb-7'>{headline}</Headline>
                     <Typography variant='xl' className='max-w-[50rem] mx-auto text-center' >{content}</Typography>
                 </div>
-
             </Section>
-            <div className="flex gap-8 max-w-[60rem] mx-auto mt-[-20rem] mb-[8.5rem]">
+            <div className="grid grid-cols-2 gap-8 max-w-[60rem] mx-auto mt-[-16rem] mb-[8.5rem]">
                 {contentCard.map((card, index) => <ServiceCard key={index} card={card} />)}
+                <div className="group overflow-hidden relative col-span-2 bg-info-primary rounded-4xl" style={{
+                    // backgroundImage: `url('${LinkedingSvg}')`,
+                    // color: 'red'
+                    // backgroundPosition: 'bottom right'
+                }} >
+                    <div className="absolute bottom-0 right-0">
+                        <img onClick={() => window.open(linkedinUrl)} src={LinkedingSvg} className=' cursor-pointer transition-all hover:brightness-95 group-hover:z-10 w-64 h-w-64 pr-4 pb-4 rotate-[-25deg]  group-hover:rotate-0 scale-110 group-hover:scale-100 relative top-10 group-hover:top-0 left-10 group-hover:left-0 ' alt="" />
+                    </div>
+                    <div className="py-20 px-24 relative">
+
+                        <Headline variant='h5' className='text-white mb-12' >
+                            Don’t find what you’re
+                            <br />
+                            looking for, email us at <br />
+                            <a href={`mailto:${emailAddress}`} className='text-primary transition-all block hover:scale-105 cursor-pointer' >
+                                {emailAddress}
+                            </a>
+                        </Headline>
+                        <Typography variant='4xl' className='text-white' >Or reach out to our founder on Linkedin</Typography>
+                    </div>
+
+                </div>
             </div>
         </>
 
