@@ -4,6 +4,7 @@ import Typography from '../../components/common/Typography'
 import Headline from '../../components/common/Headline';
 import testimonials from '../../data/testimonials';
 import Carousel from '../../components/layout-ui/carousel/Carousel';
+import { Chip } from '../Services/ServiceHeroSection';
 // import useDragDirection from '../../hooks/useDragDirection';
 
 const TestimonialSection = ({
@@ -29,9 +30,9 @@ const TestimonialSection = ({
 
     return (
         <Section>
-            <div className={`${theme.bgClassName} px-4 pt-28 pb-16 rounded-[3.2rem] mb-28 overflow-x-hidden`}>
+            <div className={`${theme.bgClassName} px-4 pt-28 pb-8 md:pb-16 rounded-[3.2rem] md:mb-28 my-12  overflow-x-hidden`}>
                 <div className="max-w-[56rem] mx-auto" id='carousel'>
-                    <Typography variant='lg' className={`${theme.chipClassName} mb-8 py-3 px-12 text-center rounded-4xl max-w-fit mx-auto uppercase font-medium`} >{small}</Typography>
+                    <div className={`${theme.chipClassName} text-sm md:text-lg mb-8 py-3 px-6 md:px-12 text-center rounded-4xl max-w-fit mx-auto uppercase font-medium`} >{small}</div>
                     <Headline className={`${theme.headlineClassName} text-center !font-bold mb-16`} >{headline}</Headline>
                 </div>
 

@@ -221,7 +221,7 @@ html {
 }
 
 p {
-  line-height: 1.2;
+  /* line-height: 1.2; */
 }
 
 .accordion-item {
@@ -332,9 +332,35 @@ p {
     font-size: 16px;
   }
 
-  .h-1 {
+  .h1,
+  .h2,
+  .h3 {
     font-size: 3.5rem;
   }
+
+  .h3,
+  .h5 {
+    font-size: 2.25rem;
+  }
+
+  .h5 {
+    font-size: 1.375rem;
+  }
+
+
+  .t-base,
+  .t-base-2x {
+    font-size: 1rem;
+  }
+
+  .t-3xl,
+  .t-2xl,
+  .t-xl,
+  .t-lg,
+  .t-sm {
+    font-size: 1rem;
+  }
+
 }
 
 
@@ -351,6 +377,7 @@ p {
 
 .custom-bullet {
   border-radius: 50%;
+  background: rgba(255, 255, 255, 0.479);
   @apply !bg-slate-400;
   @apply !h-6 !w-6 !cursor-pointer !rounded-full !transition-all !mr-4
 }
@@ -358,7 +385,7 @@ p {
 /* Carousel--end */
 
 .swiper-pagination-bullet-active {
-  background: white !important;
+  background: rgba(255, 255, 255, 0.703) !important;
   @apply !w-12;
   /* Active color */
   opacity: 1;

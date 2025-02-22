@@ -38,7 +38,7 @@ const HeroSection = () => {
 
             <div className="relative z-10">
 
-                <div className=" hero-content-wrapper mb-24 !mx-auto text-white rounded-b-[5rem] text-center relative flex- flex-col items-center">
+                <div className=" hero-content-wrapper mb-8 md:mb-24 !mx-auto text-white rounded-b-[5rem] text-center relative flex- flex-col items-center">
                     <div className="relative mb-6">
 
 

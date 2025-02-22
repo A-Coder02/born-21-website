@@ -16,14 +16,15 @@ const ServiceDetailsSection = ({ details, theme = {} }) => {
     console.log({ _headline, theme })
     return (
         <Section>
-            <div className="mx-auto max-w-[90rem] mb-24">
-                {/* <Headline variant='h3' className='mb-28 text-center text-white' >{details.headline.replace(details.headlineHighlightSmall, <span className='bg-black'>{details.headlineHighlightSmall}</span>)}</Headline> */}
-                <Headline variant='h3' className='mb-28 text-center text-white flex flex-wrap gap-4 justify-center' >{_headline.map(h => details.headlineHighlightSmall.includes(h) ? <span className={``} >{h}</span> : <span>{h}</span>)}</Headline>
-                <ul className="grid grid-cols-2 gap-9 list-none">
+            <div className="mx-auto max-w-[90rem] mb-8 md:mb-24">
+                {/* <Headline variant='h3' className='md:mb-28 my-12  text-center text-white' >{details.headline.replace(details.headlineHighlightSmall, <span className='bg-black'>{details.headlineHighlightSmall}</span>)}</Headline> */}
+                <Headline variant='h3' className='md:mb-28 my-12  text-center text-white flex flex-wrap gap-4 justify-center text-left' >{details.headline}</Headline>
+                {/* <Headline variant='h3' className='md:mb-28 my-12  text-center text-white flex flex-wrap gap-4 justify-center' >{_headline.map(h => details.headlineHighlightSmall.includes(h) ? <span className={``} >{h}</span> : <span>{h}</span>)}</Headline> */}
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-9 list-none">
                     {details.list.map((card, index) => <ServiceDetailCard key={index} index={index} card={card} />)}
                 </ul>
             </div>
-            <div className="mx-auto max-w-[70rem] flex flex-col gap-6 text-white text-center mb-24">
+            <div className="mx-auto max-w-[70rem] flex flex-col gap-6 text-white text-center mb-8 md:mb-24">
                 <Headline>{subHeadline}</Headline>
                 <Typography variant='3xl' className='mb-6'>{subLead}</Typography>
                 <Button className='w-fit mx-auto' size='lg' >{subButtonContent}</Button>
@@ -36,12 +37,12 @@ const ServiceDetailsSection = ({ details, theme = {} }) => {
 export default ServiceDetailsSection;
 
 const ServiceDetailCard = ({ card, index }) =>
-    <li className={`rounded-3xl py-12 px-12 flex flex-col gap-7 ${cardTheme[index].bgColor} ${cardTheme[index].textColor}`}>
+    <li className={`rounded-3xl p-7 md:p-12 flex flex-col gap-7 ${cardTheme[index].bgColor} ${cardTheme[index].textColor}`}>
         {/* {Svg} */}
         {console.log({ p: card.icon })}
-        <img src={card.icon} className='h-20 object-contain object-left' alt="" />
+        <img src={card.icon} className=' h-10 md:h-20 object-contain object-left' alt="" />
         <div className="">
-            {card.title && <Headline variant='h5' className='!font-bold t-6xl'>{card.title}</Headline>}
+            {card.title && <Headline variant='h5' className='!font-bold'>{card.title}</Headline>}
             {card.headline && <Headline variant='h3' className='!font-bold'>{card.headline}</Headline>}
             {card.small && <Typography variant='5xl' className='!font-bold'>{card.small}</Typography>}
         </div>

@@ -26,7 +26,7 @@ const Button = ({
     const _variant = getVariant(variant);
     const _size = getSize(size);
     const _rounded = rounded ? 'rounded-[5.625rem]' : 'rounded-[1rem]';
-    const _className = `min-w-36 font-nueue font-semibold cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
+    const _className = `text-center min-w-36 font-nueue font-semibold cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
 
     return (
         <button className={_className} type={type} onClick={onClick}>
@@ -54,7 +54,7 @@ function getVariant(variant = 'primary') {
  */
 function getSize(size = 'base') {
     switch (size) {
-        case 'lg': return 't-base-2x px-18 py-8';
+        case 'lg': return 'text-xl md:text-[2rem] py-5 px-8 md:px-18 md:py-8';
         case 'md': return 't-lg px-10 py-4';
         case 'base': return 't-lg px-3 py-1.5';
         default: return 't-lg px-3 py-1.5';

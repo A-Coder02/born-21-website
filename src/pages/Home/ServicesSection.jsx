@@ -55,7 +55,7 @@ const ServicesSection = () => {
 
     return (
         <>
-            <Section sectionClassName='bg-primary' containerClassName='py-28 min-h-[44rem]' >
+            <Section sectionClassName='bg-primary' containerClassName='md:py-28 py-12  min-h-[44rem]' >
                 <div className='max-w-[58rem] mx-auto'>
                     <Headline variant='h5' className='text-center mb-7'>{headline}</Headline>
                     <Typography variant='xl' className='max-w-[50rem] mx-auto text-center' >{content}</Typography>

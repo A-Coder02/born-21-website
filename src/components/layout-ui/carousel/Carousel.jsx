@@ -100,7 +100,7 @@ const Carousel = ({ theme, list = [] }) => {
     return (
         <div className="mb-20">
             <Swiper
-                className="!pl-64 h-[30rem]"
+                className="md:!pl-64 h-[35rem] md:h-[30rem]"
                 modules={[Pagination]}
                 pagination={{
                     clickable: true,

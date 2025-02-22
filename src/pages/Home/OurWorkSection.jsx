@@ -46,7 +46,7 @@ const OurWorkSection = () => {
     return (
         <Section>
             <div className="max-w-[56rem] mx-auto mb-52">
-                <div className="flex  justify-end mb-28">
+                <div className="flex  justify-end md:mb-28 my-12 ">
                     <Typography variant='lg' className='max-w-[30rem]' >{content}</Typography>
                 </div>
                 <div className="flex flex-col gap-16 min-h-screen">

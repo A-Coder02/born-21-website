@@ -43,7 +43,7 @@ const FaqSection = () => {
 
     return (
         <Section>
-            <div className="flex justify-between max-w-[90rem] mx-auto mb-28">
+            <div className="flex justify-between max-w-[90rem] mx-auto md:mb-28 my-12 ">
                 <div className="max-w-[33rem]">
                     <Headline variant='h5' className='!font-medium mb-7 font-nueue' >{headline}</Headline>
                     <Button onClick={() => window.open(calendlyUrl)} size='md' variant='primary' className='text-black' endIcon={<img src={ButtonIcon} className='invert-100 w-4 h-4' />} >{ctaText}</Button>
