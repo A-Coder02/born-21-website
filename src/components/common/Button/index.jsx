@@ -54,9 +54,9 @@ function getVariant(variant = 'primary') {
  */
 function getSize(size = 'base') {
     switch (size) {
-        case 'lg': return 'text-base-2x px-18 py-8';
-        case 'md': return 'text-lg px-10 py-4';
-        case 'base': return 'text-lg px-3 py-1.5';
-        default: return 'text-lg px-3 py-1.5';
+        case 'lg': return 't-base-2x px-18 py-8';
+        case 'md': return 't-lg px-10 py-4';
+        case 'base': return 't-lg px-3 py-1.5';
+        default: return 't-lg px-3 py-1.5';
     }
 }

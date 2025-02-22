@@ -41,7 +41,7 @@ const ServiceDetailCard = ({ card, index }) =>
         {console.log({ p: card.icon })}
         <img src={card.icon} className='h-20 object-contain object-left' alt="" />
         <div className="">
-            {card.title && <Headline variant='h5' className='!font-bold !text-6xl'>{card.title}</Headline>}
+            {card.title && <Headline variant='h5' className='!font-bold t-6xl'>{card.title}</Headline>}
             {card.headline && <Headline variant='h3' className='!font-bold'>{card.headline}</Headline>}
             {card.small && <Typography variant='5xl' className='!font-bold'>{card.small}</Typography>}
         </div>

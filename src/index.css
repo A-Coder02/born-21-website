@@ -254,6 +254,71 @@ p {
   /* Default for laptops */
 }
 
+/* Typography */
+.h1 {
+  font-size: 10rem;
+  @apply font-extrabold
+}
+
+.h2 {
+  font-size: 9.5rem;
+  @apply font-extrabold
+}
+
+.h3 {
+  font-size: 5rem;
+}
+
+.h4 {
+  font-size: 4.125rem;
+}
+
+.h5 {
+  font-size: 3rem;
+}
+
+.h6 {
+  font-size: 2.25rem;
+}
+
+.sm {
+  font-size: 0.75rem;
+}
+
+.t-base {
+  font-size: 1rem;
+}
+
+.t-base-2x {
+  font-size: 2rem;
+}
+
+.t-lg {
+  font-size: 1.125rem;
+}
+
+.t-xl {
+  font-size: 1.375rem;
+}
+
+.t-2xl {
+  font-size: 1.5rem;
+}
+
+.t-3xl {
+  font-size: 1.625rem;
+}
+
+.t-4xl {
+  font-size: 1.75rem;
+}
+
+.t-5xl {
+  font-size: 2.25rem;
+}
+
+
+
 /* Big screens (e.g., desktops, large monitors) */
 @media (min-width: 1440px) {
   :root {
@@ -265,6 +330,10 @@ p {
 @media (max-width: 768px) {
   :root {
     font-size: 16px;
+  }
+
+  .h-1 {
+    font-size: 3.5rem;
   }
 }
 

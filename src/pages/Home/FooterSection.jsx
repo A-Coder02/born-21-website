@@ -39,7 +39,7 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
                         </ul>
                     </div>
                 </div>
-                <Headline className={'text-center text-[12rem] font-black ' + headlineClassName} >BORN21 MEDIA</Headline>
+                <Headline className={'text-center !text-[12rem] font-black ' + headlineClassName} >BORN21 MEDIA</Headline>
             </footer>
 
 

@@ -22,14 +22,14 @@ export default Typography;
 
 function getVariant(variant = 'base') {
     switch (variant) {
-        case 'base': return 'text-base';
-        case 'sm': return 'text-sm';
-        case 'lg': return 'text-lg';
-        case 'xl': return 'text-xl';
-        case '2xl': return 'text-2xl';
-        case '3xl': return 'text-3xl';
-        case '4xl': return 'text-4xl';
-        case '5xl': return 'text-5xl';
-        default: return 'text-base';
+        case 'base': return 't-base';
+        case 'sm': return 't-sm';
+        case 'lg': return 't-lg';
+        case 'xl': return 't-xl';
+        case '2xl': return 't-2xl';
+        case '3xl': return 't-3xl';
+        case '4xl': return 't-4xl';
+        case '5xl': return 't-5xl';
+        default: return 't-base';
     }
 }

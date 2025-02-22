@@ -46,12 +46,12 @@ function getComponent(variant) {
  */
 function getVariant(variant = 'h5') {
     switch (variant) {
-        case 'h1': return 'text-h1 font-extrabold'; // 160px
-        case 'h2': return 'text-h2 font-black'; // 152px
-        case 'h3': return 'text-h3 font-semibold'; // 80px
-        case 'h4': return 'text-h4 font-bold'; // 66px
-        case 'h5': return 'text-h5 font-semibold'; // 48px
-        case 'h6': return 'text-h6 font-semibold'; // 36px
-        default: return 'text-h5 font-extrabold'; // 48px
+        case 'h1': return 'h1'; // 160px
+        case 'h2': return 'h2'; // 152px
+        case 'h3': return 'h3 font-semibold'; // 80px
+        case 'h4': return 'h4 font-bold'; // 66px
+        case 'h5': return 'h5 font-semibold'; // 48px
+        case 'h6': return 'h6 font-semibold'; // 36px
+        default: return 'h5 font-extrabold'; // 48px
     }
 }

@@ -5,7 +5,7 @@ const TextField = ({ name, label, placeholder, required = false }) => {
     return (
         <Typography component={'label'} htmlFor={name} variant='lg' className='w-full' >
             <span className='pl-8 block mb-2' >{label}
-                {required && <span className='text-red-400' >*</span>}
+                {required && <span className='t-red-400' >*</span>}
             </span>
             <input
                 id={name}
