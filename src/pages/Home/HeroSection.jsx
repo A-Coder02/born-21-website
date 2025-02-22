@@ -55,8 +55,9 @@ const HeroSection = () => {
                         </div>
                         {/* <Headline variant='h1' >GROWTH</Headline> */}
                         <TextLoop texts={['VIEWS', 'ENGAGEMENT', 'GROWTH',]} />
+                        <p className='text-base md:text-3xl font-medium text-center max-w-4xl mx-auto' >We transform overlooked videos into viral hits and build organic content strategies that fuel long-term growth</p>
                     </div>
-                    <Button variant='primary' size='lg' className='mx-auto' >Start your journey</Button>
+                    <Button variant='primary' size='lg' className='mx-auto' >Grow Your Channel</Button>
                 </div>
                 <div className="pb-16 flex justify-between items-center text-white">
 
