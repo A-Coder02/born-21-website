@@ -46,9 +46,9 @@ const OurWorkSection = () => {
     return (
         <Section>
             <div className="max-w-[56rem] mx-auto mb-52">
-                <div className="flex  justify-end md:mb-28 my-12 ">
+                {/* <div className="flex  justify-end md:mb-28 my-12 ">
                     <Typography variant='lg' className='max-w-[30rem]' >{content}</Typography>
-                </div>
+                </div> */}
                 <div className="flex flex-col gap-16 min-h-screen">
                     {cardList.map((card, index) =>
                         <div className="sticky top-28" key={card.id}>
