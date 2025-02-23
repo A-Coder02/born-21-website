@@ -87,7 +87,7 @@ const WorkSectionCard = ({
                     // backgroundColor: primaryColor
                 }}
             >
-                <p variant='base' className={`font-medium text-${theme.batchTextColor}`}
+                <p className={`text-sm md:text-base font-medium text-${theme.batchTextColor}`}
                 >
                     {small.split(' ').slice(0, small.split(' ').length - 2).join(' ')}
                 </p>
