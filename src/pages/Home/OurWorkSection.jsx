@@ -82,7 +82,7 @@ const WorkSectionCard = ({
         }}
     >
         <div className="article-header flex justify-between items-center">
-            <div className={`rounded-4xl px-6 py-3 text-center bg-${theme.primary.light}`}
+            <div className={`rounded-4xl md:px-6 md:py-3 py-1 px-3 text-center bg-${theme.primary.light}`}
                 style={{
                     // backgroundColor: primaryColor
                 }}
