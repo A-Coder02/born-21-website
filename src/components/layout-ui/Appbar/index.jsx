@@ -40,10 +40,10 @@ const Appbar = () => {
                     {/* <Typography variant='4xl' className={`font-medium cursor-pointer !pr-4 border-r border-r-${isHeaderToggleStyles ? 'white' : "black"}`} >Menu</Typography> */}
                     <div
                         // variant='4xl'
-                        className='text-base md:text-4xl group font-medium  cursor-pointer  inline-flex gap-3 items-center'
+                        className='text-base md:text-3xl group font-medium  cursor-pointer  inline-flex gap-3 items-center'
                     >
                         <span className="relative pb-1 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-[2px] before:bg-white before:transition-all before:duration-300 group-hover:before:w-full">
-                            Grow Your Channel
+                            Start Youtube Journey
                         </span>
 
                         <span className={`transition ${isHeaderToggleStyles ? 'invert-0' : 'invert'}`} >
