@@ -381,7 +381,7 @@ p {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.479);
   @apply !bg-slate-400;
-  @apply !h-7 !w-7 !cursor-pointer !rounded-full !transition-all !mr-4
+  @apply !h-5 !w-5 w-5 !cursor-pointer !rounded-full !transition-all !mr-4
 }
 
 /* Carousel--end */
