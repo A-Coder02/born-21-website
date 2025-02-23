@@ -26,7 +26,7 @@ const HeroSection = () => {
         <div className="relative overflow-hidden rounded-b-xl md:rounded-b-[5rem]">
             <Section id='hero-section'
                 sectionClassName='bg-[#008CFF]'
-                containerClassName='pt-28 md:pt-52 overflow-hidden relative md:px-32 ' >
+                containerClassName='pt-34 md:pt-52 overflow-hidden relative md:px-32 ' >
 
 
                 <div className="relative z-10">
