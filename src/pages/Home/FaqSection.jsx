@@ -43,12 +43,12 @@ const FaqSection = () => {
 
     return (
         <Section>
-            <div className="flex justify-between max-w-[90rem] mx-auto md:mb-28 my-12 ">
+            <div className="flex md:flex-row flex-col justify-between max-w-[90rem] mx-auto md:mb-28 my-12 ">
                 <div className="max-w-[33rem]">
-                    <Headline variant='h5' className='!font-medium mb-7 font-nueue' >{headline}</Headline>
-                    <Button onClick={() => window.open(calendlyUrl)} size='md' variant='primary' className='text-black' endIcon={<img src={ButtonIcon} className='invert-100 w-4 h-4' />} >{ctaText}</Button>
+                    <h3 className='!font-medium mb-7 font-nueue text-3xl md:text-5xl text-center md:text-left' >{headline}</h3>
+                    <Button onClick={() => window.open(calendlyUrl)} size='md' variant='primary' className='text-black mx-auto mb-6 md:m-0' endIcon={<img src={ButtonIcon} className='invert-100 w-4 h-4' />} >{ctaText}</Button>
                 </div>
-                <ul type='none' className='w-[35rem]' >
+                <ul type='none' className='w-full md:w-[35rem]' >
                     {
                         accordionData.map((accordion, index) =>
                             <Accordion key={index}
