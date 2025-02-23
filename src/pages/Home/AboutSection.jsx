@@ -13,9 +13,9 @@ const AboutSection = () => {
     const aboutParagraph = 'Born21 Media LLC is a YouTube Growth agency committed to helping mid to large-sized brands & businesses transform their YouTube presence into a powerful digital asset';
 
     return (
-        <Section sectionClassName='mt-18 pt-4 mb-48'>
-            <div className="flex flex-col gap-12 max-w-[75rem] mx-auto items-end">
-                <div className="about-headline-wrapper flex-1 flex flex-col md:gap-6 mx-auto">
+        <Section sectionClassName='mt-18 pt-4 md:mb-36 mb-16'>
+            <div className="flex flex-col gap-0 max-w-[50rem] mx-auto items-end">
+                <div className="about-headline-wrapper flex-1 flex flex-col gap-2 md:gap-3 mx-auto">
                     <div className="about-headline-item flex gap-4 items-center ">
                         <motion.div
                             className="about-headline-graphic overflow-hidden h-12 md:h-24 relative rounded-full flex-1 bg-transparent"
@@ -28,23 +28,22 @@ const AboutSection = () => {
                                 backgroundImage: `url(${YTGraphicSvg})`,
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: 'contain'
-                                // backgroundSize: '38rem'
                             }}></div>
                         </motion.div>
-                        <h2 className='font-medium text-[3.2rem] md:text-[6.25rem]' >Youtube</h2>
+                        <h2 className='font-nohemi font-semibold text-5xl md:text-[6.25rem]' >Youtube</h2>
                     </div>
                     <div className="about-headline-item flex gap-4 items-center">
-                        <h2 className='font-medium text-[3.2rem] md:text-[6.25rem]' >Growth Agency</h2>
+                        <h2 className='font-nohemi font-semibold text-5xl md:text-[6.25rem] text-nowrap' >Growth Agency</h2>
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row gap-8">
-                    <p className='text-2xl md:text-3xl font-medium flex-1' >
+                <div className="flex flex-col md:flex-row gap-8 mt-7 md:mt-11">
+                    <p className='text-2xl md:text-xl font-medium flex-1' >
                         Born21 Media is a YouTube Growth agency committed to helping mid to large-sized brands & businesses <br />
                         <span className='text-gray-400 inline pl-1' >
                             transform their YouTube presence into a powerful digital asset
                         </span>
                     </p>
-                    <p className='text-base md:text-xl flex-1' >Our expertise spans consulting services and done-for-you solutions, enabling brands to create engaging content that resonates deeply with their audience. By building organic brand equity, we help reduce reliance on ads, boost credibility, and deliver long-term growth. </p>
+                    <p className='text-base md:text-base flex-1' >Our expertise spans consulting services and done-for-you solutions, enabling brands to create engaging content that resonates deeply with their audience. By building organic brand equity, we help reduce reliance on ads, boost credibility, and deliver long-term growth. </p>
                 </div>
 
             </div>
