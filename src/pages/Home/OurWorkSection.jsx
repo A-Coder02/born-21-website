@@ -102,7 +102,7 @@ const WorkSectionCard = ({
             <h4 className='text-white mb-3.5 md:mb-7 max-w-[34rem] text-4xl font-semibold md:text-[4.15rem]' >{headline}</h4>
 
             <div className=" md:mb-4 flex justify-between flex-col md:flex-row gap-6 md:items-end mt-auto">
-                <p variant='xl' className='text-base md:text-xl font-light md:max-w-[29rem] text-white'>
+                <p variant='xl' className='text-base md:text-xl font-light md:max-w-[29rem] text-white tracking-widest md:tracking-normal'>
                     {lead}
                 </p>
                 <div className="text-white flex items-center gap-2 cursor-pointer group" onClick={() => navigate(`/services/${small}`)} >

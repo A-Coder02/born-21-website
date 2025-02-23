@@ -13,9 +13,9 @@ const Appbar = () => {
     const navigate = useNavigate();
     return (
         <Section containerClassName='!py-5 md:!py-8 md:!px-32' sectionClassName='fixed top-0 left-0 z-50' style={{
-            backgroundColor: !isHeaderToggleStyles ? 'white' : 'transparent',
+            // backgroundColor: !isHeaderToggleStyles ? 'white' : 'transparent',
             borderColor: !isHeaderToggleStyles ? 'black' : 'transparent',
-            borderBottomWidth: '1px',
+            // borderBottomWidth: '1px',
             transition: '0.6s'
         }}  >
             <div className={"header-wrapper flex items-center justify-between transition-all "}
