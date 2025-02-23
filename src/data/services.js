@@ -105,8 +105,8 @@ const services = [
         // Hero and Card Section
         titleColor: '#0ABF8F',
         small: 'Healthcare Case Study',
-        headline: 'From 86K to 1.4M Views',
-        leadContent: 'How We Scaled a Healthcare Brand’s YouTube Presence',
+        headline: '900% More Views in 12 Months',
+        leadContent: 'How We Transformed a Struggling Healthcare Brand’s Stagnant YouTube Channel into a Growth Machine',
         list: [
             { id: 1, title: '1,500% Growth in Views', lead: 'Monthly views skyrocketed from 86K to 1.4M' },
             { id: 2, title: 'Authority-Driven Content Strategy', lead: 'Increased credibility and audience trust' },
