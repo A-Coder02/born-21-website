@@ -157,7 +157,6 @@
   --color-blue: #086AC5;
   --color-blue-2: #0D5B9B;
 
-  @apply py-5
   /* 16px */
   /* --text-base: 1rem; */
   /* 16px */
@@ -203,6 +202,9 @@
   box-sizing: border-box;
 }
 
+q {
+  @apply py-5
+}
 
 html {
   font-family: 'NeueHaasDisplay', serif;
