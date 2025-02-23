@@ -24,10 +24,10 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
     return (
         <Section>
             <footer className="max-w-[90rem] mx-auto md:pb-16 pb-11">
-                <div className="flex flex-col gap-4 md:flex-row justify-between mb-9 items-center py-8 px-7 md:py-9 md:px-12 rounded-4xl bg-gray-50">
+                <div className="flex mx-auto flex-col gap-4 md:flex-row md:justify-between mb-9 items-center py-8 px-7 md:py-9 md:px-12 rounded-4xl bg-gray-50">
                     {/* <Headline>{headline}</Headline> */}
-                    <h5 className='text-4xl md:text-[1.375rem] font-medium' >{headline}</h5>
-                    <Button variant='secondary' size='md' className='!py-6 !font-medium !w-full  md:w-fit'
+                    <h5 className='text-4xl md:text-[1.375rem] font-medium flex-1' >{headline}</h5>
+                    <Button variant='secondary' size='md' className='!py-6 !font-medium w-full  md:w-fit'
                         endIcon={<img src={ButtonIcon} className='w-4 h-4' />}
                     >{ctaContent}</Button>
                 </div>
