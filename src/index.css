@@ -331,7 +331,7 @@ p {
 /* Mobile screens */
 @media (max-width: 768px) {
   :root {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .h1,
