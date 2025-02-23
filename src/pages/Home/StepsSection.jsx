@@ -18,13 +18,13 @@ const StepsSection = () => {
     ]
     return (
         <Section sectionClassName='bg-green-dark-2 py-4 md:py-32' >
-            <div className="max-w-[90rem] mx-auto bg-white rounded-4xl px-24 py-20">
-                <p className='bg-green-light mx-auto mb-8 md:text-lg rounded-4xl py-3 px-4 text-center uppercase font-medium max-w-fit' >{chip}</p>
-                <Headline className={`text-[#045041] px-20 text-center !font-extrabold mb-4`} >{headline}</Headline>
+            <div className="max-w-[90rem] mx-auto bg-white p-8 rounded-4xl md:px-24 md:py-20 my-8 md:my-0">
+                <p className='bg-green-light mx-auto mb-8 md:text-lg rounded-4xl md:py-3 p-4 text-center uppercase font-medium max-w-fit' >{chip}</p>
+                <h5 className={`text-[#045041] md:px-20 text-center !font-extrabold mb-4 text-4xl font-medium md:text-5xl`} >{headline}</h5>
                 <Typography variant='xl' className='text-center mb-12'>
                     {lead}
                 </Typography>
-                <ul className="grid grid-cols-3 gap-5 list-none">
+                <ul className="grid md:grid-cols-3 gap-10 md:gap-5 list-none">
                     {list.map((el, index) => <li key={index} className={`${el.className} rounded-3xl w-full flex flex-col gap-8 p-10`} >
                         <img src={el.icon} className='w-16 h-16' alt="" />
                         <div className="flex gap-4 items-center">
@@ -34,7 +34,7 @@ const StepsSection = () => {
                             <div className="span flex-1 h-0 w-full border border-[0.5px] border-gray-700"></div>
                         </div>
                         <div className="">
-                            <h3 className='md:text-lg font-medium' >{el.title}</h3>
+                            <h3 className='md:text-lg font-semibold' >{el.title}</h3>
                             <p className='text-base' >{el.lead}</p>
                         </div>
                     </li>)}

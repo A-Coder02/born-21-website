@@ -10,6 +10,8 @@ import Button from '../../components/common/Button'
 import LinkedingSvg from '../../assets/svgs/linkedin.svg'
 import { emailAddress, linkedinUrl } from '../../utils/urls'
 
+import RightArrowSvg from '../../assets/images/Vector-2.png'
+
 const ServicesSection = () => {
     const headline = 'Built for Long-Term YouTube Success'
     const content = 'We provide consulting and done-for-you solutions that help brands create engaging content, build organic brand equity, and reduce reliance on ads—driving credibility and sustainable growth.'
@@ -17,19 +19,18 @@ const ServicesSection = () => {
     const contentCard = [
         {
             id: 1,
-            title: 'Done-For-You (DFY)',
+            title: 'Growth Consulting',
             small: 'Full Youtube Management',
-            lead: 'We handle everything—so you can focus on your business',
+            lead: 'Data-backed strategies to unlock sustainable YouTube growth',
             list: [
-                'Full post-production for long-form content',
-                'Shorts strategy and execution',
-                'Active channel management',
-                'Thumbnail & title optimization',
-                'SEO & performance tracking',
-                'Complete backlog transformation',
-                'Competitor analysis & benchmarking'
+                'Bi-weekly consulting calls',
+                'Content strategy planning',
+                'Thumbnail & title ideation',
+                'Video performance reviews',
+                'Shorts Strategy ',
+                'Team training & SOPs',
             ],
-            ctxText: 'Hand Over the Reins',
+            ctxText: 'Get Started',
             bgColor: '#00916E',
             uiColor: '#D0FBE8',
             icon: CheckIconPng,
@@ -37,19 +38,18 @@ const ServicesSection = () => {
         },
         {
             id: 2,
-            title: 'Done-With-You (DWY)',
+            title: 'Full Management',
             small: 'Learn Youtube magic from us',
-            lead: 'We guide your team to create high-performing content',
+            lead: 'End-to-end YouTube management for maximum organic impact',
             list: [
-                'Bi-weekly strategy sessions',
-                'Fresh content ideas for your queue',
-                'Thumbnail & title brainstorming',
-                'Video performance reviews',
-                'Custom team playbooks (optional)',
-                'Calendar planning & workflow optimization',
-                'Retention & engagement strategies'
+                'Everything in Growth Consulting ',
+                'Thumbnail design & optimization',
+                'Video Edits (Long + Shorts)*',
+                'Active channel management',
+                'Performance tracking & Optimization',
+                'Backlog optimization',
             ],
-            ctxText: 'Power Up Your Team',
+            ctxText: 'Get Started',
             bgColor: '#E30090',
             uiColor: '#FFE2FB',
             icon: CheckIconPng2,
@@ -58,7 +58,7 @@ const ServicesSection = () => {
 
     return (
         <>
-            <Section sectionClassName='bg-primary' containerClassName='md:py-28 py-12  min-h-[44rem]' >
+            <Section sectionClassName='bg-primary' containerClassName='md:py-28 py-12 min-h-[38rem]  md:min-h-[44rem]' >
                 <div className='max-w-[58rem] mx-auto'>
                     <p className='bg-primary-light  mx-auto mb-8 md:text-lg rounded-4xl py-3 px-4 text-center uppercase font-medium max-w-fit md:max-w-xs' >{chip}</p>
 
@@ -66,9 +66,9 @@ const ServicesSection = () => {
                     <Typography variant='xl' className='max-w-[50rem] mx-auto text-center' >{content}</Typography>
                 </div>
             </Section>
-            <div className="grid grid-cols-2 gap-8 max-w-[60rem] mx-auto mt-[-16rem] mb-[8.5rem]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto mt-[-16rem] mb-[8.5rem] p-4">
                 {contentCard.map((card, index) => <ServiceCard key={index} card={card} />)}
-                <div className="group overflow-hidden relative col-span-2 bg-info-primary rounded-4xl" style={{
+                <div className="group overflow-hidden relative md:col-span-2 bg-info-primary rounded-4xl" style={{
                     // backgroundImage: `url('${LinkedingSvg}')`,
                     // color: 'red'
                     // backgroundPosition: 'bottom right'
@@ -112,15 +112,12 @@ const ServiceCard = ({ card }) => {
             backgroundColor: card.bgColor
         }}>
             <div className="flex gap-3 mb-5">
-                <div className={`w-6 h-6 rounded-full`} style={{
-                    backgroundColor: card.uiColor
-                }}></div>
-                <div className={`w-6 h-6 rounded-full`} style={{
-                    backgroundColor: card.uiColor
-                }}></div>
-                <div className={`w-6 h-6 rounded-full`} style={{
-                    backgroundColor: card.uiColor
-                }}></div>
+                {new Array(3).fill(0).map((elt, index) =>
+                    <div key={index} className={`w-4 h-4 md:w-6 md:h-6 rounded-full`} style={{
+                        backgroundColor: card.uiColor
+                    }}></div>
+                )}
+
             </div>
 
             <Typography variant='5xl' className='font-medium mb-5' >{card.title}</Typography>
@@ -136,7 +133,7 @@ const ServiceCard = ({ card }) => {
                 }
 
             </ul>
-            <Button size='md' rounded={false} className='w-full !py-3' >{card.ctxText}</Button>
+            <Button endIcon={<img src={RightArrowSvg} className='invert w-4 h-4 md:w-6 md:h-6' />} size='md' rounded={false} className='w-full !py-3 mb-4' >{card.ctxText}</Button>
         </div>
     </div>
 }

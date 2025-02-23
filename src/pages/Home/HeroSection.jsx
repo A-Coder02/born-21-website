@@ -23,11 +23,11 @@ const HeroSection = () => {
     const content = `Strategy to execution, we handle everything to scale your YouTube with data-driven content and proven results`
 
     return (
-        <Section id='hero-section' containerClassName='pt-52 overflow-hidden relative px-32 bg-[#008CFF] rounded-b-[5rem]' >
+        <Section id='hero-section' containerClassName='pt-24 md:pt-52 overflow-hidden relative md:px-32 bg-[#008CFF]  rounded-b-xl md:rounded-b-[5rem]' >
 
             <Wave fill='#069FFF'
                 paused={false}
-                className='absolute left-0 bottom-[-25rem] h-1/2 rotate-[-16deg] scale-[2.7]'
+                className='absolute left-0 bottom-[-5rem]  md:bottom-[-30rem] h-1/2 rotate-[-16deg]  scale-[2] md:scale-[2.7]'
 
                 options={{
                     amplitude: 20,
@@ -44,12 +44,12 @@ const HeroSection = () => {
 
                         <div className="w-fit relative mx-auto">
                             <Headline variant='h1' className='leading-[0.7]' >MORE</Headline>
-                            <div className="absolute z-10 top-[-5.5rem]  right-[-11.5rem] w-52 h-52 grid place-content-center">
-                                <div className="slow-spin absolute w-52 h-52w-52 top-0 right-0">
-                                    <img src={YTGraphic} className="w-52 h-52 relative" alt="" />
+                            <div className="absolute z-10 md:top-[-5.5rem] right-[-4.5rem] top-[-2rem]  md:right-[-11.5rem] w-20 h-20 md:w-52 md:h-52 grid place-content-center">
+                                <div className="slow-spin absolute w-20 h-20 md:w-52 md:h-52 top-0 right-0">
+                                    <img src={YTGraphic} className="w-20 h-20 md:w-52 md:h-52 relative" alt="" />
                                 </div>
                                 <div className="relative">
-                                    <img src={YTPng} className="w-32 h-32" alt="" />
+                                    <img src={YTPng} className="md:w-32 w-12 md:h-32 h-12" alt="" />
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@ const HeroSection = () => {
                     </div>
                     <Button variant='primary' size='lg' className='mx-auto' >Grow Your Channel</Button>
                 </div>
-                <div className="pb-16 flex justify-between items-center text-white">
+                <div className="pb-16 flex flex-col md:flex-row gap-6 justify-between items-center text-white">
 
                     <div className="flex justify-between items-center gap-16">
                         {data.map(d =>

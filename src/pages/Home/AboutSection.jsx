@@ -15,30 +15,31 @@ const AboutSection = () => {
     return (
         <Section sectionClassName='mt-18 pt-4 mb-48'>
             <div className="flex flex-col gap-12 max-w-[75rem] mx-auto items-end">
-                <div className="about-headline-wrapper flex-1 flex flex-col gap-6">
-                    <div className="about-headline-item flex gap-4 items-center">
+                <div className="about-headline-wrapper flex-1 flex flex-col md:gap-6 mx-auto">
+                    <div className="about-headline-item flex gap-4 items-center ">
                         <motion.div
-                            className="about-headline-graphic overflow-hidden h-32 relative rounded-full flex-1 bg-transparent"
+                            className="about-headline-graphic overflow-hidden h-12 md:h-24 relative rounded-full flex-1 bg-transparent"
                             initial={{ flex: 0 }}
                             whileInView={{ flex: 1 }}
                             transition={{ duration: 1, ease: "easeInOut" }}
                             viewport={{ once: true }}
                         >
-                            <div className="h-34 absolute top-0 left-0 w-screen mx-auto" style={{
+                            <div className="h-12 md:h-34 absolute top-0 left-0 w-screen mx-auto" style={{
                                 backgroundImage: `url(${YTGraphicSvg})`,
                                 backgroundRepeat: 'no-repeat',
-                                backgroundSize: '38rem'
+                                backgroundSize: 'contain'
+                                // backgroundSize: '38rem'
                             }}></div>
                         </motion.div>
-                        <Headline variant='h2' className='!font-medium' >Youtube</Headline>
+                        <h2 className='font-medium text-[3.2rem] md:text-[6.25rem]' >Youtube</h2>
                     </div>
                     <div className="about-headline-item flex gap-4 items-center">
-                        <Headline variant='h2' className='!font-medium'>Growth Agency</Headline>
+                        <h2 className='font-medium text-[3.2rem] md:text-[6.25rem]' >Growth Agency</h2>
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row gap-8">
-                    <p className='text-3xl font-medium flex-1' >
-                        Born21 Media is a YouTube Growth agency committed to helping mid to large-sized brands & businesses
+                    <p className='text-2xl md:text-3xl font-medium flex-1' >
+                        Born21 Media is a YouTube Growth agency committed to helping mid to large-sized brands & businesses <br />
                         <span className='text-gray-400 inline pl-1' >
                             transform their YouTube presence into a powerful digital asset
                         </span>

@@ -45,7 +45,7 @@ const OurWorkSection = () => {
 
     return (
         <Section>
-            <div className="max-w-[56rem] mx-auto mb-52">
+            <div className="max-w-[56rem] mx-auto md:mb-52 mb-32">
                 {/* <div className="flex  justify-end md:mb-28 my-12 ">
                     <Typography variant='lg' className='max-w-[30rem]' >{content}</Typography>
                 </div> */}
@@ -79,7 +79,7 @@ const WorkSectionCard = ({
 }) => {
     const navigate = useNavigate()
     console.log({ navigate })
-    return <article className={`rounded-[3.125rem] py-11 px-14 aspect-video flex flex-col gap-12 bg-${theme.bgColor}`}
+    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-11 md:px-14 py-8 px-8 aspect-video flex flex-col gap-6 md:gap-12 bg-${theme.bgColor}`}
         style={{
             // backgroundColor: secondaryColor
         }}
@@ -95,19 +95,19 @@ const WorkSectionCard = ({
                         // color: batchTextColor
                     }}
                 >
-                    {small}
+                    {small.split(' ').slice(0, small.split(' ').length - 2).join(' ')}
                 </Typography>
             </div>
 
-            <div className="flex gap-3">
-                {new Array(3).fill().map(el => <div className={`w-6 h-6 rounded-full bg-${theme.primary.light}`} />)}
-
+            <div className="flex gap-1 md:gap-3">
+                {new Array(3).fill().map(el => <div className={`w-2 h-2 md:w-6 md:h-6 rounded-full bg-${theme.primary.light}`} />)}
             </div>
         </div>
-        <Headline variant='h4' className='text-white max-w-[35rem]' >{headline}</Headline>
+        <h4 className='text-white max-w-[35rem] text-5xl font-semibold md:text-[4.15rem]' >{headline}</h4>
+        {/* <Headline variant='h4'  >{headline}</Headline> */}
 
-        <div className="flex justify-between items-end mt-auto">
-            <Typography variant='xl' className='max-w-[29rem] text-white'>
+        <div className="flex justify-between flex-col md:flex-row gap-6 md:items-end mt-auto">
+            <Typography variant='xl' className='md:max-w-[29rem] text-white'>
                 {lead}
             </Typography>
             <div className="text-white flex items-center gap-2 cursor-pointer group" onClick={() => navigate(`/services/${small}`)} >
