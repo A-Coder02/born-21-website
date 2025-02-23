@@ -23,7 +23,7 @@ const StepsSection = () => {
                 <h3 className='text-[#045041] text-center font-nohemi font-extrabold text-2xl md:text-5xl md:px-64 mb-5' >{headline}</h3>
                 {/* <h5 className={`text-[#045041] md:px-24 text-center !font-extrabold mb-4 text-4xl font-medium md:text-5xl`} >{headline}</h5> */}
                 <p className='text-center mb-8 md:mb-14 text-base md:text-2xl md:px-26' >{lead}</p>
-                <ul className="grid md:grid-cols-3 gap-10 md:gap-4 list-none px-2 md:px-8">
+                <ul className="grid md:grid-cols-3 gap-10 md:gap-5 list-none px-2 md:px-12">
                     {list.map((el, index) => <li key={index} className={`${el.className} rounded-3xl w-full p-10`} >
                         <img src={el.icon} className='w-16 h-16 mb-6' alt="" />
                         <div className="flex gap-4 items-center mb-3.5">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Section from '../../components/layout-ui/Section'
 import Headline from '../../components/common/Headline'
 import Typography from '../../components/common/Typography'
@@ -9,12 +9,12 @@ import Button from '../../components/common/Button'
 
 import LinkedingSvg from '../../assets/svgs/linkedin.svg'
 import { emailAddress, linkedinUrl } from '../../utils/urls'
-
+import { motion } from "framer-motion";
 import RightArrowSvg from '../../assets/images/Vector-2.png'
 
 const ServicesSection = () => {
     const headline = 'Built for Long-Term YouTube Success'
-    const content = 'We provide consulting and done-for-you solutions that help brands create engaging content, build organic brand equity, and reduce reliance on ads—driving credibility and sustainable growth.'
+    const content = 'We provide consulting and full YouTube management solutions that help brands create engaging content, build organic brand equity, and reduce reliance on ads—driving credibility and sustainable growth.'
     const chip = 'Strategic & Scalable'
     const contentCard = [
         {
@@ -31,10 +31,10 @@ const ServicesSection = () => {
                 'Team training & SOPs',
             ],
             ctxText: 'Get Started',
-            bgColor: '#00916E',
+            bgColor: '#0ABF8F',
             uiColor: '#D0FBE8',
             icon: CheckIconPng,
-
+            tabText: 'Done-For-You'
         },
         {
             id: 2,
@@ -53,44 +53,71 @@ const ServicesSection = () => {
             bgColor: '#E30090',
             uiColor: '#FFE2FB',
             icon: CheckIconPng2,
+            tabText: 'Done-With-You'
         },
     ]
+
+    const [active, setActive] = useState(0)
 
     return (
         <>
             <Section sectionClassName='bg-primary' containerClassName='md:py-28 py-12 min-h-[38rem]  md:min-h-[44rem]' >
-                <div className='max-w-[58rem] mx-auto'>
-                    <p className='bg-primary-light  mx-auto mb-8 md:text-lg rounded-4xl py-3 px-4 text-center uppercase font-medium max-w-fit md:max-w-xs' >{chip}</p>
-
-                    <Headline variant='h5' className='text-center mb-7'>{headline}</Headline>
-                    <Typography variant='xl' className='max-w-[50rem] mx-auto text-center' >{content}</Typography>
+                <div className='max-w-[60rem] mx-auto px-12 md:px-0'>
+                    {/* <p className='bg-primary-light  mx-auto mb-8 md:text-lg rounded-4xl py-3 px-4 text-center uppercase font-medium max-w-fit md:max-w-xs' >{chip}</p> */}
+                    <p className='bg-primary-light max-w-fit py-3 px-5 md:px-12 rounded-4xl uppercase mx-auto mb-8 md:mb-8  text-sm md:text-base font-medium text-center min-w-52' >{chip}</p>
+                    <h3 className='text-center font-nohemi font-extrabold text-2xl md:text-5xl md:px-0 mb-5' >{headline}</h3>
+                    <p variant='xl' className=' text-base md:text-lg max-w-[43.7rem] mx-auto text-center' >{content}</p>
                 </div>
             </Section>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto mt-[-16rem] mb-[8.5rem] p-4">
-                {contentCard.map((card, index) => <ServiceCard key={index} card={card} />)}
-                <div className="group overflow-hidden relative md:col-span-2 bg-info-primary rounded-4xl" style={{
-                    // backgroundImage: `url('${LinkedingSvg}')`,
-                    // color: 'red'
-                    // backgroundPosition: 'bottom right'
-                }} >
-                    <div className="absolute bottom-0 right-0">
-                        <img onClick={() => window.open(linkedinUrl)} src={LinkedingSvg} className=' cursor-pointer transition-all hover:brightness-95 group-hover:z-10 w-64 h-w-64 pr-4 pb-4 rotate-[-25deg]  group-hover:rotate-0 scale-110 group-hover:scale-100 relative top-10 group-hover:top-0 left-10 group-hover:left-0 ' alt="" />
-                    </div>
-                    <div className="py-20 px-24 relative">
 
-                        <Headline variant='h5' className='text-white mb-12' >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto md:mt-[-18rem] md:mb-24 mb-16 mt-[-15rem] p-4">
+                <div className="flex flex-col gap-8 md:hidden">
+                    <div className=" mx-auto bg-primary-light py-1 px-2 flex gap-2 rounded-4xl">
+                        {contentCard.map((c, index) =>
+                            <div key={c.id}
+                                onClick={() => setActive(index)}
+                                className={`${active === index ? "bg-green" : 'bg-transparent'} ${active === index ? "text-white" : 'text-black'} transition font-medium rounded-4xl py-2 px-4 flex-1 text-nowrap`}>
+                                {c.tabText}
+                            </div>
+                        )}
+                    </div>
+                    <motion.div
+                        key={active}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <ServiceCard key={active} card={contentCard.find((card, index) => index === active)} />
+                    </motion.div>
+                </div>
+                <div className="hidden md:grid md:col-span-2 md:grid-cols-2 gap-4">
+                    {contentCard.map((card, index) =>
+                        <div className="col-span-1">
+                            <ServiceCard key={index} card={card} />
+                        </div>
+                    )}
+                </div>
+                <div className="group overflow-hidden relative md:col-span-2 bg-info-primary rounded-4xl aspect-[9/10] md:aspect-auto md:h-full">
+                    <div className="absolute bottom-[-4rem] right-0">
+                        <img onClick={() => window.open(linkedinUrl)} src={LinkedingSvg} className=' cursor-pointer transition-all hover:brightness-110 group-hover:z-10 w-64 h-w-64 pr-4 pb-4 rotate-[-16deg]  group-hover:rotate-0 scale-110 group-hover:scale-100 relative top-10 group-hover:top-[-4rem] left-10 group-hover:left-0 ' alt="" />
+                    </div>
+                    <div className="py-20 md:px-24 px-8 relative">
+                        <h2 className='font-nohemi font-semibold md:text-5xl text-2xl text-white mb-6 md:mb-12' >
                             Don’t find what you’re
                             <br />
                             looking for, email us at <br />
                             <a href={`mailto:${emailAddress}`} className='text-primary transition-all block hover:scale-105 cursor-pointer' >
                                 {emailAddress}
                             </a>
-                        </Headline>
-                        <Typography variant='4xl' className='text-white' >Or reach out to our founder on Linkedin</Typography>
+                        </h2>
+                        <p className='text-white text-lg md:text-3xl max-w-3xs md:max-w-fit' onClick={() => window.open(linkedinUrl)} >Or reach out to our founder on
+                            Linkedin</p>
+                        {/* <Typography variant='4xl' className='text-white' ></Typography> */}
                     </div>
 
                 </div>
-            </div>
+            </div >
         </>
 
     )
@@ -106,7 +133,8 @@ const ServiceCard = ({ card }) => {
                 color: card.bgColor
             }}
         >
-            <Typography variant='xl' className='font-medium' >{card.small}</Typography>
+            <p className="text-xl font-medium">{card.small}</p>
+            {/* <Typography variant='xl' className='font-medium' >{card.small}</Typography> */}
         </div>
         <div className="text-white flex-1 p-7 rounded-4xl relative" style={{
             backgroundColor: card.bgColor
@@ -120,20 +148,22 @@ const ServiceCard = ({ card }) => {
 
             </div>
 
-            <Typography variant='5xl' className='font-medium mb-5' >{card.title}</Typography>
-            <Typography variant='lg' className='font-medium mb-6' >{card.lead}</Typography>
+            <h4 className=' md:text-4xl text-3xl font-medium mb-5' >{card.title}</h4>
+            <p className='mb-6 text-base md:text-lg' >{card.lead}</p>
+            {/* <Typography variant='lg' className='mb-6' >{card.lead}</Typography> */}
             <ul className="flex flex-col gap-4 mb-6" type='none' >
                 {
                     card.list.map((li, index) =>
                         <li key={index} className="flex items-center gap-2">
                             <img src={card.icon} alt="" className='w-5 h-5' />
-                            <Typography variant='base' className='font-medium' >{li}</Typography>
+                            <span className='text-sm md:text-base' >{li}</span>
+                            {/* <Typography variant='base' className='' >{li}</Typography> */}
                         </li>
                     )
                 }
 
             </ul>
-            <Button endIcon={<img src={RightArrowSvg} className='invert w-4 h-4 md:w-6 md:h-6' />} size='md' rounded={false} className='w-full !py-3 mb-4' >{card.ctxText}</Button>
+            <Button endIcon={<img src={RightArrowSvg} className='invert w-4 h-4 md:w-4 md:h-4 relative bottom-0' />} size='md' rounded={false} className='w-full !py-3 mb-6' >{card.ctxText}</Button>
         </div>
     </div>
 }
