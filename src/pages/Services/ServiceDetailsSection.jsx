@@ -16,16 +16,18 @@ const ServiceDetailsSection = ({ details, theme = {} }) => {
     console.log({ _headline, theme })
     return (
         <Section>
-            <div className="mx-auto max-w-[90rem] mb-8 md:mb-24">
+            <div className="mx-auto max-w-[90rem] mb-12 md:mb-28">
                 <h3 variant='h3' className='md:max-w-[60rem] mx-auto md:text-6xl text-4xl font-extrabold md:mb-14 mb-9  md:text-center text-white flex flex-wrap gap-4 justify-center text-left' >{details.headline}</h3>
                 <ul className="grid grid-cols-1 md:grid-cols-2 md:gap-9 gap-4 list-none">
                     {details.list.map((card, index) => <ServiceDetailCard key={index} index={index} card={card} />)}
                 </ul>
             </div>
-            <div className="mx-auto max-w-[70rem] flex flex-col gap-6 text-white text-center mb-8 md:mb-24">
-                <Headline>{subHeadline}</Headline>
-                <Typography variant='3xl' className='mb-6'>{subLead}</Typography>
-                <Button className='w-fit mx-auto' size='lg' >{subButtonContent}</Button>
+            <div className="mx-auto max-w-[70rem] flex flex-col text-white md:mb-28 mb-20 ">
+                <h5 className='mb-3 font-nohemi font-extrabold md:text-5xl text-3xl text-left md:text-center' >{subHeadline}</h5>
+                {/* <Headline>{subHeadline}</Headline> */}
+                <p className='md:text-2xl text-base mb-8 md:mb-9 text-left md:text-center max-w-[50rem] mx-auto' >{subLead}</p>
+                {/* <Typography variant='3xl' className='mb-6'>{subLead}</Typography> */}
+                <Button className='w-full md:w-fit mx-auto' size='lg' >{subButtonContent}</Button>
             </div>
 
         </Section>
