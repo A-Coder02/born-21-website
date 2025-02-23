@@ -9,7 +9,7 @@ import * as Yup from 'yup';
 const ServiceHeroSection = ({ card }) => {
     return (
         <Section>
-            <div className="flex flex-col md:flex-row md:gap-8 wrapper py-24 md:py-44 md:px-32">
+            <div className="flex flex-col md:flex-row md:gap-8 wrapper py-24 pb-20 md:py-44 md:px-32">
                 <div className="wrapper-item flex-1 text-white">
                     <Chip card={card} />
                     <h1 className='mb-2 md:mb-4 text-5xl md:text-7xl font-nohemi font-bold' >{card.headline}</h1>
