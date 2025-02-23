@@ -13,10 +13,12 @@ import FC1Svg from '../assets/svgs/finance-care/fc-1.svg';
 import FC2Svg from '../assets/svgs/finance-care/fc-2.svg';
 import FC3Svg from '../assets/svgs/finance-care/fc-3.svg';
 import FC4Svg from '../assets/svgs/finance-care/fc-4.svg';
+import { pdfFolderUrl } from '../utils/urls';
 
 const services = [
     {
         id: 1,
+        pdf_url: pdfFolderUrl + 'personal.pdf',
         theme: {
             bgColor: 'brown-dark',
             primary: {
@@ -93,6 +95,7 @@ const services = [
         }
     }, {
         id: 2,
+        pdf_url: pdfFolderUrl + 'healthcare.pdf',
         theme: {
             bgColor: 'info-dark',
             primary: {
@@ -166,6 +169,7 @@ const services = [
     },
     {
         id: 3,
+        pdf_url: pdfFolderUrl + 'finance.pdf',
         theme: {
             bgColor: 'green-dark',
             primary: {

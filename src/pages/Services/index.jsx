@@ -15,6 +15,7 @@ const Services = () => {
 
     const card = services.find(service => service.small === title.replaceAll("%", " "));
 
+
     return (
         <main className={`bg-${card.theme.bgColor}`}>
             <PageTransition>
