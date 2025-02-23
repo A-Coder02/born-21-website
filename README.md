@@ -17,22 +17,22 @@ Remained - Carousel , Accordion, Button StartIcon ✔
 - Sections ✔
 - UI ✔
 - Animation ✔
-- API Integration
-- Node Mailer
+- API Integration ✔
+- Node Mailer ✔
 
 Page
 - Home Page ✔
-- Services Page 🔴
+- Services Page ✔
 (Icons ✔, Formik ✔)
 - Not Found ✔
 Lib for Animation: 
 - https://github.com/woofers/react-wavify#readme ✔
 - Framer Motion ✔
 
-Responsiveness for Mobile
+Responsiveness for Mobile 
 SEO ✔
 Meta Tags and Favicon ✔
-Splash Screen
+Splash Screen 
 Framer Motion ✔
 
 Issues:
