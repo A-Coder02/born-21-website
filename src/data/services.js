@@ -25,6 +25,7 @@ const services = [
                 light: 'primary'
             },
             batchTextColor: 'black',
+            dotsColor: 'primary-light'
         },
         // Hero and Card Section
         titleColor: 'green',
@@ -98,7 +99,8 @@ const services = [
                 dark: 'info-dark',
                 light: 'info'
             },
-            batchTextColor: 'info',
+            batchTextColor: 'white',
+            dotsColor: 'blue-light'
         },
         // Hero and Card Section
         titleColor: '#0ABF8F',
@@ -170,6 +172,7 @@ const services = [
                 light: 'green'
             },
             batchTextColor: 'white',
+            dotsColor: 'green-light'
         },
         // Hero and Card Section
         titleColor: 'green',

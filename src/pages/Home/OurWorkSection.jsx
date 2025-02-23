@@ -45,13 +45,10 @@ const OurWorkSection = () => {
 
     return (
         <Section>
-            <div className="max-w-[56rem] mx-auto md:mb-52 mb-32">
-                {/* <div className="flex  justify-end md:mb-28 my-12 ">
-                    <Typography variant='lg' className='max-w-[30rem]' >{content}</Typography>
-                </div> */}
-                <div className="flex flex-col gap-16 min-h-screen">
+            <div className="max-w-[56rem] mx-auto mb-24 md:mb-48">
+                <div className="flex flex-col md:gap-16 gap-6 min-h-screen">
                     {cardList.map((card, index) =>
-                        <div className="sticky top-28" key={card.id}>
+                        <div className="sticky top-40" key={card.id}>
                             <WorkSectionCard
                                 headline={card.headline}
                                 small={card.small}
@@ -79,7 +76,7 @@ const WorkSectionCard = ({
 }) => {
     const navigate = useNavigate()
     console.log({ navigate })
-    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-11 md:px-14 py-8 px-8 aspect-video flex flex-col gap-6 md:gap-12 bg-${theme.bgColor}`}
+    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-10 md:px-14 py-7 px-5 flex flex-col gap-5 md:gap-12 bg-${theme.bgColor}`}
         style={{
             // backgroundColor: secondaryColor
         }}
@@ -90,31 +87,30 @@ const WorkSectionCard = ({
                     // backgroundColor: primaryColor
                 }}
             >
-                <Typography variant='base' className={`font-medium text-${theme.batchTextColor}`}
-                    style={{
-                        // color: batchTextColor
-                    }}
+                <p variant='base' className={`font-medium text-${theme.batchTextColor}`}
                 >
                     {small.split(' ').slice(0, small.split(' ').length - 2).join(' ')}
-                </Typography>
+                </p>
             </div>
 
             <div className="flex gap-1 md:gap-3">
-                {new Array(3).fill().map(el => <div className={`w-2 h-2 md:w-6 md:h-6 rounded-full bg-${theme.primary.light}`} />)}
+                {new Array(3).fill().map(el => <div className={`w-2 h-2 md:w-6 md:h-6 rounded-full bg-${theme.dotsColor}`} />)}
             </div>
         </div>
-        <h4 className='text-white max-w-[35rem] text-5xl font-semibold md:text-[4.15rem]' >{headline}</h4>
-        {/* <Headline variant='h4'  >{headline}</Headline> */}
+        <div className="">
 
-        <div className="flex justify-between flex-col md:flex-row gap-6 md:items-end mt-auto">
-            <Typography variant='xl' className='md:max-w-[29rem] text-white'>
-                {lead}
-            </Typography>
-            <div className="text-white flex items-center gap-2 cursor-pointer group" onClick={() => navigate(`/services/${small}`)} >
-                <Typography variant='' className='' >Read Case Study</Typography>
-                <img src={Vector2Png} alt="" className='w-3.5 relative left-0 group-hover:left-1 transition-all' />
+            <h4 className='text-white mb-3.5 md:mb-7 max-w-[34rem] text-4xl font-semibold md:text-[4.15rem]' >{headline}</h4>
+
+            <div className=" md:mb-4 flex justify-between flex-col md:flex-row gap-6 md:items-end mt-auto">
+                <p variant='xl' className='text-base md:text-xl font-light md:max-w-[29rem] text-white'>
+                    {lead}
+                </p>
+                <div className="text-white flex items-center gap-2 cursor-pointer group" onClick={() => navigate(`/services/${small}`)} >
+                    <p variant='' className='text-sm md:text-base' >Read Case Study</p>
+                    <img src={Vector2Png} alt="" className='w-3.5 relative left-0 group-hover:left-1 transition-all' />
+                </div>
             </div>
-
         </div>
+
     </article>
 }
