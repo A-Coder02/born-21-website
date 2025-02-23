@@ -26,6 +26,7 @@ const App = () => {
   ])
   return (
     <div>
+      <div className="bg-info"></div>
       <RouterProvider router={router} />
       <div className="bg-brown-dark bg-info-dark"></div>
     </div>
