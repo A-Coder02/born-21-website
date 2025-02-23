@@ -75,6 +75,7 @@ const services = [
             ]
         },
         testimonial: {
+            headline: 'From views to revenue—our clients speak about our impact',
             theme: {
                 bgClassName: 'bg-brown-light',
                 headlineClassName: 'text-white',
@@ -146,6 +147,7 @@ const services = [
             ]
         },
         testimonial: {
+            headline: 'What happens when strategy meets execution? Our clients know',
             theme: {
                 bgClassName: 'bg-blue-2',
                 headlineClassName: 'text-white',
@@ -218,6 +220,7 @@ const services = [
             ]
         },
         testimonial: {
+            headline: 'From views to revenue—our clients speak about our impact',
             theme: {
                 bgClassName: 'bg-green-dark-2',
                 headlineClassName: 'text-white',

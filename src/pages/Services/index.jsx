@@ -21,7 +21,8 @@ const Services = () => {
                 <ServiceHeroSection card={card} />
                 <ServiceAboutSection about={card.about} />
                 <ServiceDetailsSection details={card.details} theme={card.theme} />
-                <TestimonialSection theme={card.testimonial.theme} />
+                <TestimonialSection theme={card.testimonial.theme} headline={card.testimonial.headline} />
+                <div className="md:h-32 h-14"></div>
                 <FooterSection headlineClassName='text-white' />
             </PageTransition>
         </main >
