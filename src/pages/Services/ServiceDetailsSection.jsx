@@ -17,10 +17,8 @@ const ServiceDetailsSection = ({ details, theme = {} }) => {
     return (
         <Section>
             <div className="mx-auto max-w-[90rem] mb-8 md:mb-24">
-                {/* <Headline variant='h3' className='md:mb-28 my-12  text-center text-white' >{details.headline.replace(details.headlineHighlightSmall, <span className='bg-black'>{details.headlineHighlightSmall}</span>)}</Headline> */}
-                <Headline variant='h3' className='md:mb-28 my-12  text-center text-white flex flex-wrap gap-4 justify-center text-left' >{details.headline}</Headline>
-                {/* <Headline variant='h3' className='md:mb-28 my-12  text-center text-white flex flex-wrap gap-4 justify-center' >{_headline.map(h => details.headlineHighlightSmall.includes(h) ? <span className={``} >{h}</span> : <span>{h}</span>)}</Headline> */}
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-9 list-none">
+                <h3 variant='h3' className='md:max-w-[60rem] mx-auto md:text-6xl text-4xl font-extrabold md:mb-14 mb-9  md:text-center text-white flex flex-wrap gap-4 justify-center text-left' >{details.headline}</h3>
+                <ul className="grid grid-cols-1 md:grid-cols-2 md:gap-9 gap-4 list-none">
                     {details.list.map((card, index) => <ServiceDetailCard key={index} index={index} card={card} />)}
                 </ul>
             </div>
@@ -42,11 +40,12 @@ const ServiceDetailCard = ({ card, index }) =>
         {console.log({ p: card.icon })}
         <img src={card.icon} className=' h-10 md:h-20 object-contain object-left' alt="" />
         <div className="">
-            {card.title && <Headline variant='h5' className='!font-bold'>{card.title}</Headline>}
-            {card.headline && <Headline variant='h3' className='!font-bold'>{card.headline}</Headline>}
-            {card.small && <Typography variant='5xl' className='!font-bold'>{card.small}</Typography>}
+            {card.title && <h5 variant='h5' className='!font-bold md:text-6xl text-4xl '>{card.title}</h5>}
+
+            {card.headline && <h3 variant='h3' className='!font-bold md:text-8xl text-5xl'>{card.headline}</h3>}
+            {card.small && <p variant='5xl' className='!font-bold md:text-3xl text-xl'>{card.small}</p>}
         </div>
-        <Typography variant='2xl' className='text-black' >{card.lead}</Typography>
+        <p variant='2xl' className='text-black text-sm md:text-3xl' >{card.lead}</p>
     </li>
 
 const cardTheme = [
