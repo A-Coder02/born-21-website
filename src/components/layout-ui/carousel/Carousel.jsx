@@ -98,9 +98,9 @@ const testimonials = [
 
 const Carousel = ({ theme, list = [] }) => {
     return (
-        <div className="mb-20">
+        <div className="md:mb-20">
             <Swiper
-                className="md:!pl-64 h-[35rem] md:h-[30rem]"
+                className="md:!pl-64 h-[30rem] !px-8 md:px-0 md:h-[34rem]"
                 modules={[Pagination]}
                 pagination={{
                     clickable: true,
@@ -108,7 +108,7 @@ const Carousel = ({ theme, list = [] }) => {
                         return `<span class="${className} custom-bullet"></span>`;
                     },
                 }}
-                spaceBetween={20}
+                spaceBetween={32}
                 slidesPerView={3}
                 breakpoints={{
                     320: { slidesPerView: 1 },
@@ -117,12 +117,12 @@ const Carousel = ({ theme, list = [] }) => {
                 }}
             >
                 {list.map((card, index) => (
-                    <SwiperSlide key={index}>
+                    <SwiperSlide key={index} className="md:!w-96" >
                         <CarouselCard theme={theme} card={card} />
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </div >
     );
 };
 
