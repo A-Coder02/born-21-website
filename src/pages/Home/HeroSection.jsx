@@ -9,6 +9,7 @@ import Typography from '../../components/common/Typography'
 import Wave from 'react-wavify'
 import Youtube from '../../assets/svgs/YoutubeGraphic'
 import TextLoop from '../../components/TextLoop'
+import AnimatedList from '../../components/AnimatedList'
 
 
 
@@ -17,7 +18,7 @@ const HeroSection = () => {
     const data = [
         { count: 15, title: 'Niches' },
         { count: 50, title: 'Niches' },
-        { count: '500M', title: 'View Generated' },
+        { count: 500, title: 'View Generated', unit: 'M' },
     ]
 
     const content = `Strategy to execution, we handle everything to scale your YouTube with data-driven content and proven results`
@@ -54,10 +55,12 @@ const HeroSection = () => {
                     </div>
                     <div className="pb-16 flex flex-col md:flex-row gap-6 justify-between items-center text-white">
 
-                        <div className="flex justify-between items-center gap-16">
+                        <div className="flex grid grid-cols-3 justify-between items-center gap-8 max-w-2xl">
                             {data.map(d =>
-                                <div className="flex flex-col gap-1 ">
-                                    <Headline >{d.count}+</Headline>
+                                <div className="flex flex-col gap-1 w-28 md:w-40 ">
+
+                                    <Headline><AnimatedList from={1} to={d.count} />{d.unit}+</Headline>
+                                    {/* <Headline >{d.count}+</Headline> */}
                                     <Typography>{d.title}</Typography>
                                 </div>
                             )}
