@@ -26,7 +26,7 @@ const Button = ({
     const _variant = getVariant(variant);
     const _size = getSize(size);
     const _rounded = rounded ? 'rounded-[5.625rem]' : 'rounded-[1rem]';
-    const _className = `text-center min-w-36 font-nueue font-semibold cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
+    const _className = `relative text-center min-w-36 font-nueue font-semibold cursor-pointer transition-colors flex items-center justify-center gap-2 ${_variant} ${_size} ${_rounded} ${className}`;
 
     return (
         <button className={_className} type={type} onClick={onClick}>

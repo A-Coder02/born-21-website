@@ -11,6 +11,8 @@ import Youtube from '../../assets/svgs/YoutubeGraphic'
 import TextLoop from '../../components/TextLoop'
 import AnimatedList from '../../components/AnimatedList'
 
+import Svg from '../../assets/images/Vector-2.png'
+
 
 
 const HeroSection = () => {
@@ -51,7 +53,19 @@ const HeroSection = () => {
                             <TextLoop texts={['VIEWS', 'ENGAGEMENT', 'GROWTH',]} />
                             <p className='text-base md:text-3xl font-medium text-center max-w-4xl mx-auto mb-8' >We transform overlooked videos into viral hits and build organic content strategies that fuel long-term growth</p>
                         </div>
-                        <Button variant='primary' size='lg' className='mx-auto' >Grow Your Channel</Button>
+                        <Button variant='primary' size='lg' className='group mx-auto overflow-hidden relative hover:!bg-primary'>
+                            <div className="absolute left-[-100%] bottom-[-50%]  group-hover:bottom-0 group-hover:left-[0%] top-0 w-full opacity-0 group-hover:opacity-100 group-hover:w-[300%] h-full"
+                                style={{
+                                    background: 'linear-gradient(45deg, #00000020, #00000020 40%, transparent 40%, transparent 50%, #00000020 50%, #00000020 60%, transparent 60%, transparent 90%, #00000020 90%, #00000020 100%)',
+                                    transitionDuration: '700ms'
+                                }}
+                            ></div>
+                            <span className='relative z-10'>
+                                Grow Your Channel
+                            </span>
+                        </Button>
+
+
                     </div>
                     <div className="pb-16 flex flex-col md:flex-row gap-6 justify-between items-center text-white">
 
