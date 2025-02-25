@@ -21,7 +21,7 @@ const AboutSection = () => {
                             className="about-headline-graphic overflow-hidden h-12 md:h-24 relative rounded-full flex-1 bg-transparent"
                             initial={{ flex: 0 }}
                             whileInView={{ flex: 1 }}
-                            transition={{ duration: 1, ease: "easeInOut" }}
+                            transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
                             viewport={{ once: true }}
                         >
                             <div className="h-12 md:h-34 absolute top-0 left-0 w-screen mx-auto" style={{
@@ -37,13 +37,29 @@ const AboutSection = () => {
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row gap-8 mt-7 md:mt-11">
-                    <p className='text-2xl md:text-xl font-medium flex-1' >
-                        Born21 Media is a YouTube Growth agency committed to helping mid to large-sized brands & businesses <br />
-                        <span className='text-gray-400 inline pl-1' >
-                            transform their YouTube presence into a powerful digital asset
-                        </span>
-                    </p>
-                    <p className='text-base md:text-base flex-1' >Our expertise spans consulting services and done-for-you solutions, enabling brands to create engaging content that resonates deeply with their audience. By building organic brand equity, we help reduce reliance on ads, boost credibility, and deliver long-term growth. </p>
+                    <motion.div
+                        className='flex-1 relative'
+                        initial={{ opacity: 0, left: -50 }}
+                        whileInView={{ opacity: 1, left: 0 }}
+                        transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        <p className='text-2xl md:text-xl font-medium flex-1' >
+                            Born21 Media is a YouTube Growth agency committed to helping mid to large-sized brands & businesses <br />
+                            <span className='text-gray-400 inline pl-1' >
+                                transform their YouTube presence into a powerful digital asset
+                            </span>
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        className='flex-1 relative'
+                        initial={{ opacity: 0, right: -50 }}
+                        whileInView={{ opacity: 1, right: 0 }}
+                        transition={{ duration: 1, ease: "easeInOut", delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        <p className='text-base md:text-base flex-1' >Our expertise spans consulting services and done-for-you solutions, enabling brands to create engaging content that resonates deeply with their audience. By building organic brand equity, we help reduce reliance on ads, boost credibility, and deliver long-term growth. </p>
+                    </motion.div>
                 </div>
 
             </div>
