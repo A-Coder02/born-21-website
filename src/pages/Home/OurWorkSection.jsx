@@ -41,28 +41,35 @@ const OurWorkSection = () => {
 
         },
     ]
-    const cardList = services
+    const cardList = services;
+
+    const headline = 'When Brands Take YouTube Seriously'
 
     return (
         <Section id='results' >
-            <div className="max-w-[56rem] mx-auto mb-24 md:mb-48">
-                <div className="flex flex-col md:gap-16 gap-6 min-h-screen">
-                    {cardList.map((card, index) =>
-                        <div className="sticky top-40" key={card.id}>
-                            <WorkSectionCard
-                                headline={card.headline}
-                                small={card.small}
-                                lead={card.leadContent}
-                                theme={card.theme}
-                            // primaryColor={card.primaryColor}
-                            // primaryLightColor={card.primaryLightColor}
-                            // secondaryColor={card.secondaryColor}
-                            // batchTextColor={card.batchTextColor}
-                            />
-                        </div>
-                    )}
-                </div>
+            <div className="bg-blue-light py-20 md:py-28 ">
+                <div className="max-w-[60rem] mx-auto mb-24 md:mb-48 min-h-[90%]">
 
+                    <div className="flex flex-col md:gap-16 gap-6">
+                        <h3 className=' sticky top-28 text-center font-nohemi font-extrabold text-2xl md:text-5xl md:mb-16 mb-12' >{headline}</h3>
+
+                        {cardList.map((card, index) =>
+                            <div className="sticky top-52" key={card.id}>
+                                <WorkSectionCard
+                                    headline={card.headline}
+                                    small={card.small}
+                                    lead={card.leadContent}
+                                    theme={card.theme}
+                                // primaryColor={card.primaryColor}
+                                // primaryLightColor={card.primaryLightColor}
+                                // secondaryColor={card.secondaryColor}
+                                // batchTextColor={card.batchTextColor}
+                                />
+                            </div>
+                        )}
+                    </div>
+
+                </div>
             </div>
 
         </Section>
@@ -76,7 +83,7 @@ const WorkSectionCard = ({
 }) => {
     const navigate = useNavigate()
     console.log({ navigate })
-    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-10 md:px-14 py-7 px-5 flex flex-col gap-5 md:gap-12 bg-${theme.bgColor}`}
+    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-10 md:px-14 py-7 px-5 flex flex-col aspect-[16/12] md:aspect-auto gap-5 md:gap-12 bg-${theme.bgColor}`}
         style={{
             // backgroundColor: secondaryColor
         }}
@@ -98,8 +105,7 @@ const WorkSectionCard = ({
             </div>
         </div>
         <div className="">
-
-            <h4 className='text-white mb-3.5 md:mb-7 max-w-[34rem] text-4xl font-semibold md:text-[4.15rem]' >{headline}</h4>
+            <h4 className='text-white mb-3.5 md:mb-7 max-w-[36rem] text-4xl font-semibold md:text-[4.15rem]' >{headline}</h4>
 
             <div className=" md:mb-4 flex justify-between flex-col md:flex-row gap-6 md:items-end mt-auto">
                 <p variant='xl' className='text-base md:text-xl font-light md:max-w-[29rem] text-white tracking-widest md:tracking-normal'>
