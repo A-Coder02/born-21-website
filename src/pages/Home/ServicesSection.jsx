@@ -13,15 +13,15 @@ import { motion } from "framer-motion";
 import RightArrowSvg from '../../assets/images/Vector-2.png'
 
 const ServicesSection = () => {
-    const headline = 'Built for Long-Term YouTube Success'
-    const content = 'We provide consulting and full YouTube management solutions that help brands create engaging content, build organic brand equity, and reduce reliance on ads—driving credibility and sustainable growth.'
+    const headline = 'Building Brands That Own YouTube'
+    const content = 'Most brands struggle with YouTube. We fix that. Our consulting and full-management services transform underperforming channels into brand-building powerhouses'
     const chip = 'Strategic & Scalable'
     const contentCard = [
         {
             id: 1,
             title: 'Growth Consulting',
             small: 'Full Youtube Management',
-            lead: 'Data-backed strategies to unlock sustainable YouTube growth',
+            lead: 'For brands that want expert guidance to Scale',
             list: [
                 'Bi-weekly consulting calls',
                 'Content strategy planning',
@@ -30,9 +30,10 @@ const ServicesSection = () => {
                 'Shorts Strategy ',
                 'Team training & SOPs',
             ],
-            ctxText: 'Get Started',
-            bgColor: '#0ABF8F',
-            uiColor: '#D0FBE8',
+            ctxText: `Let's Talk`,
+            bgColor: '#EDFBFF',
+            uiColor: '#B5EFFF',
+            titleColor: '#1EBCFF',
             icon: CheckIconPng,
             tabText: 'Done-For-You'
         },
@@ -40,7 +41,7 @@ const ServicesSection = () => {
             id: 2,
             title: 'Full Management',
             small: 'Learn Youtube magic from us',
-            lead: 'End-to-end YouTube management for maximum organic impact',
+            lead: 'For brands that want a fully managed YouTube Channel',
             list: [
                 'Everything in Growth Consulting ',
                 'Thumbnail design & optimization',
@@ -49,9 +50,10 @@ const ServicesSection = () => {
                 'Performance tracking & Optimization',
                 'Backlog optimization',
             ],
-            ctxText: 'Get Started',
-            bgColor: '#E30090',
-            uiColor: '#FFE2FB',
+            ctxText: `Let's Talk`,
+            bgColor: '#EBFEF6',
+            uiColor: '#A4F6D6',
+            titleColor: '#0ABF8F',
             icon: CheckIconPng2,
             tabText: 'Done-With-You'
         },
@@ -61,16 +63,16 @@ const ServicesSection = () => {
 
     return (
         <>
-            <Section id='services' sectionClassName='bg-primary' containerClassName='md:py-28 py-12 min-h-[38rem]  md:min-h-[44rem]' >
+            <Section id='services' sectionClassName='bg-info-dark' containerClassName='md:py-28 py-12 min-h-[38rem]  md:min-h-[44rem]' >
                 <div className='max-w-[60rem] mx-auto px-12 md:px-0'>
                     {/* <p className='bg-primary-light  mx-auto mb-8 md:text-lg rounded-4xl py-3 px-4 text-center uppercase font-medium max-w-fit md:max-w-xs' >{chip}</p> */}
-                    <p className='bg-primary-light max-w-fit py-3 px-5 md:px-12 rounded-4xl uppercase mx-auto mb-8 md:mb-8  text-sm md:text-base font-medium text-center min-w-52' >{chip}</p>
-                    <h3 className='text-center font-nohemi font-extrabold text-2xl md:text-5xl md:px-0 mb-5' >{headline}</h3>
-                    <p variant='xl' className=' text-base md:text-lg max-w-[43.7rem] mx-auto text-center' >{content}</p>
+                    <p className='bg-info text-white max-w-fit py-3 px-5 md:px-12 rounded-4xl uppercase mx-auto mb-8 md:mb-8  text-sm md:text-base font-medium text-center min-w-52' >{chip}</p>
+                    <h3 className='text-white text-center font-nohemi font-extrabold text-2xl md:text-5xl md:px-0 mb-5' >{headline}</h3>
+                    <p variant='xl' className='text-white text-base md:text-lg max-w-[50.7rem] mx-auto text-center' >{content}</p>
                 </div>
             </Section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto md:mt-[-18rem] md:mb-24 mb-16 mt-[-15rem] p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto md:mt-[-23rem] md:mb-24 mb-16 mt-[-15rem] p-4">
                 <div className="flex flex-col gap-8 md:hidden">
                     <div className=" mx-auto bg-primary-light py-1 px-2 flex gap-2 rounded-4xl">
                         {contentCard.map((c, index) =>
@@ -98,7 +100,7 @@ const ServicesSection = () => {
                         </div>
                     )}
                 </div>
-                <div className="group overflow-hidden relative md:col-span-2 bg-info-primary rounded-4xl aspect-[9/10] md:aspect-auto md:h-full">
+                {/* <div className="group overflow-hidden relative md:col-span-2 bg-info-primary rounded-4xl aspect-[9/10] md:aspect-auto md:h-full">
                     <div className="absolute bottom-[-4rem] right-0">
                         <img onClick={() => window.open(linkedinUrl)} src={LinkedingSvg} className=' cursor-pointer transition-all hover:brightness-110 group-hover:z-10 w-64 h-w-64 pr-4 pb-4 rotate-[-16deg]  group-hover:rotate-0 scale-110 group-hover:scale-100 relative top-10 group-hover:top-[-4rem] left-10 group-hover:left-0 ' alt="" />
                     </div>
@@ -113,10 +115,9 @@ const ServicesSection = () => {
                         </h2>
                         <p className='text-white text-lg md:text-3xl max-w-3xs md:max-w-fit' onClick={() => window.open(linkedinUrl)} >Or reach out to our founder on
                             Linkedin</p>
-                        {/* <Typography variant='4xl' className='text-white' ></Typography> */}
                     </div>
 
-                </div>
+                </div> */}
             </div >
         </>
 
@@ -135,7 +136,7 @@ const ServiceCard = ({ card }) => {
         >
             <p className="text-xl font-medium">{card.small}</p>
         </div> */}
-        <div className="text-white flex-1 p-7 rounded-4xl relative" style={{
+        <div className="flex-1 p-7 rounded-4xl relative" style={{
             backgroundColor: card.bgColor
         }}>
             <div className="flex gap-3 mb-5">
@@ -147,8 +148,10 @@ const ServiceCard = ({ card }) => {
 
             </div>
 
-            <h4 className=' md:text-4xl text-3xl font-medium mb-5' >{card.title}</h4>
-            <p className='mb-6 text-base md:text-lg' >{card.lead}</p>
+            <h4 className=' md:text-4xl text-3xl font-medium mb-5' style={{
+                color: card.titleColor
+            }} >{card.title}</h4>
+            <p className='mb-6 text-base md:text-[1.375rem] font-medium max-w-2xs' >{card.lead}</p>
             {/* <Typography variant='lg' className='mb-6' >{card.lead}</Typography> */}
             <ul className="flex flex-col gap-4 mb-6" type='none' >
                 {
@@ -160,9 +163,8 @@ const ServiceCard = ({ card }) => {
                         </li>
                     )
                 }
-
             </ul>
-            <Button endIcon={<img src={RightArrowSvg} className='invert w-4 h-4 md:w-4 md:h-4 relative bottom-0' />} size='md' rounded={false} className='w-full !py-3 mb-6' >{card.ctxText}</Button>
+            <Button endIcon={<img src={RightArrowSvg} className='!font-normal tracking-normal invert w-4 h-4 md:w-4 md:h-4 relative bottom-0' />} size='md' rounded={false} className='w-full !py-3 mb-6' >{card.ctxText}</Button>
         </div>
     </div>
 }
