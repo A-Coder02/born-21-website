@@ -127,15 +127,14 @@ export default ServicesSection
 
 const ServiceCard = ({ card }) => {
     return <div className="relative group">
-        <div className="flex-1 p-7 pb-36 transition-all duration-500 rounded-4xl absolute w-full top-0 group-hover:top-[-4.5rem]"
+        {/* <div className="flex-1 p-7 pb-36 transition-all duration-500 rounded-4xl absolute w-full top-0 group-hover:top-[-4.5rem]"
             style={{
                 backgroundColor: card.uiColor,
                 color: card.bgColor
             }}
         >
             <p className="text-xl font-medium">{card.small}</p>
-            {/* <Typography variant='xl' className='font-medium' >{card.small}</Typography> */}
-        </div>
+        </div> */}
         <div className="text-white flex-1 p-7 rounded-4xl relative" style={{
             backgroundColor: card.bgColor
         }}>
