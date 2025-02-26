@@ -55,10 +55,11 @@ const HeroSection = () => {
                                 recommended, shared, and remembered</p>
                         </div>
                         <Button endIcon={<img src={Svg} className='md:w-6 md:h-6 w-3 h-3 filter invert relative bottom-0.5 left-1.5' />} variant='primary' size='lg' className='group mx-auto overflow-hidden relative hover:!bg-primary'>
-                            <div className="absolute left-[-100%] bottom-[-50%]  group-hover:bottom-0 group-hover:left-[0%] top-0 w-full opacity-0 group-hover:opacity-100 group-hover:w-[300%] h-full"
+                            <div className="absolute left-[-300%] bottom-[-50%] scale-110  group-hover:bottom-0 group-hover:left-[0%] top-0 w-[300%] opacity-100 group-hover:opacity-100 group-hover:w-[300%] h-full"
                                 style={{
-                                    background: 'linear-gradient(45deg, #0000002e, #0000002e 40%, transparent 40%, transparent 50%, #0000002e 50%, #0000002e 60%, transparent 60%, transparent 90%, #0000002e 90%, #0000002e 100%)',
-                                    transitionDuration: '700ms'
+                                    background: 'linear-gradient(45deg, rgba(0, 0, 0, 0.243), rgba(0, 0, 0, 0.243) 40%, transparent 40%, transparent 50%, rgba(0, 0, 0, 0.243) 50%, rgba(0, 0, 0, 0.243) 60%, transparent 60%, transparent 78%, transparent 78%, transparent 100%)',
+                                    transitionDuration: '1000ms',
+
                                 }}
                             ></div>
                             <span className='relative z-10'>
