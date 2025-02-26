@@ -164,7 +164,7 @@ const ServiceCard = ({ card }) => {
                     )
                 }
             </ul>
-            <Button endIcon={<img src={RightArrowSvg} className='!font-normal tracking-normal invert w-4 md:w-4' />} size='md' rounded={false} className='w-full !py-3 mb-6 flex gap-2 items-center' >{card.ctxText}</Button>
+            <Button endIcon={<img src={RightArrowSvg} className='!font-normal tracking-normal invert w-4 md:w-4 relative bottom-0.5' />} size='md' rounded={false} className='w-full !py-3 mb-6 flex gap-2 items-center' >{card.ctxText}</Button>
         </div>
     </div>
 }
