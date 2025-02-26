@@ -18,7 +18,7 @@ function AnimatedList({ from, to }) {
             clearInterval(interval); // Stop random numbers
 
             const controls = animate(from, to, {
-                duration: 1.5,
+                duration: 3,
                 ease: "easeOut", // Smooth slow down
                 onUpdate(value) {
                     node.textContent = value.toFixed(0) ?? '0';

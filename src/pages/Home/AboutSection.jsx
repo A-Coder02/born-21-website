@@ -9,12 +9,21 @@ import AboutGraphicImage2 from '../../assets/images/about-grahic2.png';
 import AboutGraphicImage3 from '../../assets/images/about-grahic3.png';
 import YTGraphicSvg from '../../assets/svgs/YT-Graphic-SVG.svg'
 
+import AnimatedList from '../../components/AnimatedList'
+
 const AboutSection = () => {
     const aboutParagraph = 'Born21 Media LLC is a YouTube Growth agency committed to helping mid to large-sized brands & businesses transform their YouTube presence into a powerful digital asset';
 
+    const data = [
+        { count: 15, title: 'Niches' },
+        { count: 50, title: 'Niches' },
+        { count: 500, title: 'View Generated', unit: 'M' },
+    ]
+
+
     return (
         <Section sectionClassName='mt-18 pt-4 md:mb-36 mb-16' id='about'>
-            <div className="flex flex-col gap-0 max-w-[50rem] mx-auto items-end">
+            <div className="flex flex-col gap-0 max-w-[50rem] mx-auto">
                 <div className="about-headline-wrapper flex-1 flex flex-col gap-2 md:gap-3 mx-auto">
                     <div className="about-headline-item flex gap-4 items-center ">
                         <motion.div
@@ -62,6 +71,16 @@ const AboutSection = () => {
                     </motion.div>
                 </div>
 
+                <div className="grid-f grid-cols-3 flex justify-between items-center gap-8 max-w-[50rem] flex-1 mt-10 md:mt-20 px-4 md:px-0">
+                    {data.map(d =>
+                        <div className="flex flex-col gap-1 ">
+                            <h2 className='font-nohemi font-bold text-3xl md:text-[5rem]' ><AnimatedList from={1} to={d.count} />{d.unit}+</h2>
+                            {/* <Headline><AnimatedList from={1} to={d.count} />{d.unit}+</Headline> */}
+                            <p className='font-medium md:text-[2.625rem] text-lg' >{d.title}</p>
+                            {/* <Typography>{d.title}</Typography> */}
+                        </div>
+                    )}
+                </div>
             </div>
         </Section>
     );
