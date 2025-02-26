@@ -9,9 +9,10 @@ import FooterSection from './FooterSection'
 import { motion } from "framer-motion";
 import PageTransition from '../../components/layout-ui/PageTransition'
 import StepsSection from './StepsSection'
+import services from '../../data/services'
 
 const Home = () => {
-
+    const theme = services[1].testimonial.theme
     return (
         <main className='' >
             <PageTransition>
@@ -20,7 +21,7 @@ const Home = () => {
                 <OurWorkSection />
                 <ServicesSection />
                 <StepsSection />
-                <TestimonialSection />
+                <TestimonialSection theme={theme} />
                 <FaqSection />
                 <FooterSection />
             </PageTransition>

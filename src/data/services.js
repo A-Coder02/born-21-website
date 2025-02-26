@@ -79,19 +79,23 @@ const services = [
         testimonial: {
             headline: 'From views to revenue—our clients speak about our impact',
             theme: {
-                bgClassName: 'bg-brown-light',
-                headlineClassName: 'text-white',
-                chipClassName: 'bg-primary text-black',
+                bgClassName: '#744D0F', // bg-brown-light
+                headlineClassName: '#FFFFFF', // text-white
+                chipClassName: {
+                    background: '#FFE500', // bg-primary
+                    text: '#2B2B2B' // text-black
+                },
                 // Card
                 cardClassName: {
-                    container: 'bg-white',
-                    title: 'text-brown-light',
+                    container: '#FFFFFF', // bg-white
+                    title: '#744D0F' // text-brown-light
                 },
                 sliderClassName: {
-                    active: 'bg-primary',
-                    default: 'bg-white'
+                    active: '#FFE500', // bg-primary
+                    default: '#FFFFFF' // bg-white
                 }
-            },
+            }
+
         }
     }, {
         id: 2,
@@ -152,19 +156,23 @@ const services = [
         testimonial: {
             headline: 'What happens when strategy meets execution? Our clients know',
             theme: {
-                bgClassName: 'bg-blue-2',
-                headlineClassName: 'text-white',
-                chipClassName: 'bg-info-primary text-white',
+                bgClassName: '#0D5B9B', // bg-blue-2
+                headlineClassName: '#FFFFFF', // text-white
+                chipClassName: {
+                    background: '#008CFF', // bg-info-primary
+                    text: '#FFFFFF' // text-white
+                },
                 // Card
                 cardClassName: {
-                    container: 'bg-white',
-                    title: 'text-blue',
+                    container: '#FFFFFF', // bg-white
+                    title: '#086AC5' // text-blue
                 },
                 sliderClassName: {
-                    active: 'bg-info-primary',
-                    default: 'bg-white'
+                    active: '#008CFF', // bg-info-primary
+                    default: '#FFFFFF' // bg-white
                 }
-            },
+            }
+
         }
     },
     {
@@ -226,19 +234,23 @@ const services = [
         testimonial: {
             headline: 'From views to revenue—our clients speak about our impact',
             theme: {
-                bgClassName: 'bg-green-dark-2',
-                headlineClassName: 'text-white',
-                chipClassName: 'bg-green text-white',
+                bgClassName: '#007C62', // bg-green-dark-2
+                headlineClassName: '#FFFFFF', // text-white
+                chipClassName: {
+                    background: '#0ABF8F', // bg-green
+                    text: '#FFFFFF' // text-white
+                },
                 // Card
                 cardClassName: {
-                    container: 'bg-green-light',
-                    title: 'text-green-dark-2',
+                    container: '#D0FBE8', // bg-green-light
+                    title: '#007C62' // text-green-dark-2
                 },
                 sliderClassName: {
-                    active: 'bg-green',
-                    default: 'bg-green-dark-2'
+                    active: '#0ABF8F', // bg-green
+                    default: '#007C62' // bg-green-dark-2
                 }
-            },
+            }
+
         }
     }
 ]
