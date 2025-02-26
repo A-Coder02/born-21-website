@@ -35,7 +35,7 @@ const ServicesSection = () => {
             uiColor: '#B5EFFF',
             titleColor: '#1EBCFF',
             icon: CheckIconPng,
-            tabText: 'Done-For-You'
+            tabText: 'Growth Consulting'
         },
         {
             id: 2,
@@ -55,7 +55,7 @@ const ServicesSection = () => {
             uiColor: '#A4F6D6',
             titleColor: '#0ABF8F',
             icon: CheckIconPng2,
-            tabText: 'Done-With-You'
+            tabText: 'Full Management'
         },
     ]
 

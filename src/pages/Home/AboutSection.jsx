@@ -24,7 +24,7 @@ const AboutSection = () => {
     return (
         <Section sectionClassName='mt-18 pt-4 md:mb-36 mb-16' id='about'>
             <div className="flex flex-col gap-0 max-w-[50rem] mx-auto">
-                <div className="about-headline-wrapper flex-1 flex flex-col gap-2 md:gap-3 mx-auto">
+                {/* <div className="about-headline-wrapper flex-1 flex flex-col gap-2 md:gap-3 mx-auto">
                     <div className="about-headline-item flex gap-4 items-center ">
                         <motion.div
                             className="about-headline-graphic overflow-hidden h-12 md:h-24 relative rounded-full flex-1 bg-transparent"
@@ -44,7 +44,7 @@ const AboutSection = () => {
                     <div className="about-headline-item flex gap-4 items-center">
                         <h2 className='font-nohemi font-semibold text-5xl md:text-[6.25rem] text-nowrap' >Growth Agency</h2>
                     </div>
-                </div>
+                </div> */}
                 <div className="flex flex-col md:flex-row gap-8 mt-7 md:mt-11">
                     <motion.div
                         className='flex-1 relative'
