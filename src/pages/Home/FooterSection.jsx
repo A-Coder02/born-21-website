@@ -14,13 +14,24 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
     const content = 'We craft scroll-stopping YouTube strategies that turn views into engagement and channels into brands.'
     const ctaContent = 'Grow My Channel';
     const links = [
-        { title: 'About', link: 'about' },
-        { title: 'Results', link: 'results' },
-        { title: 'Services', link: 'services' },
+        { title: 'About', link: '#about', offset: 48, },
+        { title: 'Results', link: '#results', offset: 112 },
+        { title: 'Services', link: '#services', offset: 0 },
         { title: 'FAQs', link: 'faqs' },
         { title: 'Testimonials', link: 'testimonials' },
         { title: 'Contact', link: 'contact' },
-    ]
+    ];
+    function scrollToInput(inputId, offset = 0) {
+        const element = document.querySelector(inputId);
+        if (element) {
+            // const offset = 0; // Adjust scroll position
+            const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: elementPosition - offset, behavior: "smooth" });
+        } else {
+            console.warn(`Element with id "${inputId}" not found.`);
+        }
+    }
+
     return (
         <Section>
             <footer className="max-w-[90rem] mx-auto md:pb-16 pb-11">
@@ -37,7 +48,11 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
                         <p className='mb-8 font-medium !font-nueue md:text-2xl text-[1.125rem] max-w-[30rem]' >{content}</p>
                         {/* <Typographyvariant='2xl' >{content}</Typography> */}
                         <ul className="grid md:flex flex-wrap gap-x-6 md:gap-x-12 gap-y-3 grid-cols-3 list-none max-w-[22rem]">
-                            {links.map(li => <li key={li.link} className='font-normal text-sm md:text-base' >{li.title}</li>)}
+                            {links.map(li => <li key={li.link} className='font-normal text-sm md:text-base cursor-pointer' onClick={() => {
+                                if (li.link.includes('#')) {
+                                    scrollToInput(li.link, li.offset)
+                                }
+                            }}  >{li.title}</li>)}
                         </ul>
                     </div>
                 </div>

@@ -61,7 +61,7 @@ const ServicesSection = () => {
 
     return (
         <>
-            <Section sectionClassName='bg-primary' containerClassName='md:py-28 py-12 min-h-[38rem]  md:min-h-[44rem]' >
+            <Section id='services' sectionClassName='bg-primary' containerClassName='md:py-28 py-12 min-h-[38rem]  md:min-h-[44rem]' >
                 <div className='max-w-[60rem] mx-auto px-12 md:px-0'>
                     {/* <p className='bg-primary-light  mx-auto mb-8 md:text-lg rounded-4xl py-3 px-4 text-center uppercase font-medium max-w-fit md:max-w-xs' >{chip}</p> */}
                     <p className='bg-primary-light max-w-fit py-3 px-5 md:px-12 rounded-4xl uppercase mx-auto mb-8 md:mb-8  text-sm md:text-base font-medium text-center min-w-52' >{chip}</p>
