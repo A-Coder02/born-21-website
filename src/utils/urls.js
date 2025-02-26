@@ -8,6 +8,10 @@ const linkedinUrl = 'https://www.linkedin.com/company/born21media'
 const baseUrl = import.meta.env.VITE_API_URL;
 const emailAuditUrl = baseUrl + 'email-audit'
 const pdfFolderUrl = baseUrl + 'pdf/'
+
+const openCalendly = () => window.open(calendlyUrl)
+
 export {
+    openCalendly,
     calendlyUrl, emailAddress, linkedinUrl, emailAuditUrl, pdfFolderUrl
 }
