@@ -51,7 +51,7 @@ const HeroSection = () => {
                             </div>
                             {/* <Headline variant='h1' >GROWTH</Headline> */}
                             <TextLoop texts={['VIEWS', 'ENGAGEMENT', 'GROWTH',]} />
-                            <p className='text-base md:text-3xl font-medium text-center max-w-4xl mx-auto mb-12 w-2xl' >We help brands create content that gets
+                            <p className='text-base md:text-3xl font-medium text-center max-w-4xl mx-auto mb-12' >We help brands create content that gets
                                 recommended, shared, and remembered</p>
                         </div>
                         <Button endIcon={<img src={Svg} className=' md:w-6 md:h-6 w-3 h-3 filter invert relative bottom-0.5 left-1.5' />} variant='primary' size='lg' className='shadow-[0px_2px_1px_1px_#00000066] group mx-auto overflow-hidden relative hover:!bg-primary'>
