@@ -51,47 +51,47 @@ const HeroSection = () => {
                             </div>
                             {/* <Headline variant='h1' >GROWTH</Headline> */}
                             <TextLoop texts={['VIEWS', 'ENGAGEMENT', 'GROWTH',]} />
-                            <p className='text-base md:text-3xl font-medium text-center max-w-4xl mx-auto mb-8' >We transform overlooked videos into viral hits and build organic content strategies that fuel long-term growth</p>
+                            <p className='text-base md:text-3xl font-medium text-center max-w-4xl mx-auto mb-12 w-2xl' >We help brands create content that gets
+                                recommended, shared, and remembered</p>
                         </div>
-                        <Button variant='primary' size='lg' className='group mx-auto overflow-hidden relative hover:!bg-primary'>
+                        <Button endIcon={<img src={Svg} className='md:w-6 md:h-6 w-3 h-3 filter invert relative bottom-0.5 left-1.5' />} variant='primary' size='lg' className='group mx-auto overflow-hidden relative hover:!bg-primary'>
                             <div className="absolute left-[-100%] bottom-[-50%]  group-hover:bottom-0 group-hover:left-[0%] top-0 w-full opacity-0 group-hover:opacity-100 group-hover:w-[300%] h-full"
                                 style={{
-                                    background: 'linear-gradient(45deg, #00000020, #00000020 40%, transparent 40%, transparent 50%, #00000020 50%, #00000020 60%, transparent 60%, transparent 90%, #00000020 90%, #00000020 100%)',
+                                    background: 'linear-gradient(45deg, #0000002e, #0000002e 40%, transparent 40%, transparent 50%, #0000002e 50%, #0000002e 60%, transparent 60%, transparent 90%, #0000002e 90%, #0000002e 100%)',
                                     transitionDuration: '700ms'
                                 }}
                             ></div>
                             <span className='relative z-10'>
-                                Grow Your Channel
+                                Schedule a Call
                             </span>
                         </Button>
 
 
                     </div>
-                    <div className="pb-16 flex flex-col md:flex-row gap-6 justify-between items-center text-white">
+                    {/* <div className="pb-16 flex flex-col md:flex-row gap-6 justify-between items-center text-white">
 
                         <div className="flex grid grid-cols-3 justify-between items-center gap-8 max-w-2xl">
                             {data.map(d =>
                                 <div className="flex flex-col gap-1 w-28 md:w-40 ">
 
                                     <Headline><AnimatedList from={1} to={d.count} />{d.unit}+</Headline>
-                                    {/* <Headline >{d.count}+</Headline> */}
                                     <Typography>{d.title}</Typography>
                                 </div>
                             )}
                         </div>
                         <p className='font-light max-w-[28rem] text-base md:text-xl' >{content}</p>
-                    </div>
+                    </div> */}
                 </div>
 
             </Section>
             <Wave fill='#069FFF'
                 paused={false}
-                className='absolute left-0 bottom-[-5rem]  md:bottom-[-15rem] h-1/2 rotate-[-10deg]  scale-[2] md:scale-[2.7]'
+                className='absolute left-0 bottom-[-5rem]  md:bottom-[-20rem] h-1/2 rotate-[-10deg]  scale-[2] md:scale-[2.7]'
 
                 options={{
                     amplitude: 20,
                     speed: 0.2,
-                    points: 16
+                    points: 6
                 }}
             />
 

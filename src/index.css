@@ -218,7 +218,7 @@ html {
   /* -webkit-font-smoothing: antialiased; */
   /* -moz-osx-font-smoothing: grayscale; */
   line-height: 1.1 !important;
-  /* letter-spacing: 0.15ch; */
+  letter-spacing: 0.09em;
   cursor: default;
 }
 
