@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/free-mode";
+import { FreeMode, Autoplay } from "swiper/modules"
 import CarouselCard from "./CarouselCard"; // Import sub-component
 
 const testimonials = [
@@ -100,20 +102,29 @@ const Carousel = ({ theme, list = [] }) => {
     return (
         <div className="md:mb-20">
             <Swiper
-                className="md:!pl-64 h-[30rem] !px-8 md:px-0 md:h-[35rem]"
-                modules={[Pagination]}
+                // slidesPerView="auto"
+                freeMode={true}
+                loop={true} // Enables infinite looping
+                className="md:!pl-g64 h-[30rem] !px-8 md:px-0 md:h-[35rem]"
+                modules={[FreeMode, Pagination, Autoplay]}
                 pagination={{
                     clickable: true,
                     renderBullet: (index, className) => {
                         return `<span class="${className} custom-bullet"></span>`;
                     },
                 }}
+                autoplay={{
+                    delay: 2000, // No delay, continuous scroll
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
+                }}
+                speed={2000}
                 spaceBetween={32}
-                slidesPerView={3}
+                slidesPerView={5}
                 breakpoints={{
                     320: { slidesPerView: 1 },
-                    768: { slidesPerView: 2 },
-                    1024: { slidesPerView: 3 },
+                    768: { slidesPerView: 5 },
+                    1024: { slidesPerView: 5 },
                 }}
             >
                 {list.map((card, index) => (
