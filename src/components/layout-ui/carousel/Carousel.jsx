@@ -117,7 +117,7 @@ const Carousel = ({ theme, list = [] }) => {
                 }}
             >
                 {list.map((card, index) => (
-                    <SwiperSlide key={index} className="md:!w-96" >
+                    <SwiperSlide key={index} className="md:!w-96  hover:cursor-grab active:!cursor-grab" >
                         <CarouselCard theme={theme} card={card} />
                     </SwiperSlide>
                 ))}

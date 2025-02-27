@@ -8,7 +8,7 @@ import CheckIconPng2 from '../../assets/images/check-icon-2.png'
 import Button from '../../components/common/Button'
 
 import LinkedingSvg from '../../assets/svgs/linkedin.svg'
-import { emailAddress, linkedinUrl } from '../../utils/urls'
+import { emailAddress, linkedinUrl, openCalendly } from '../../utils/urls'
 import { motion } from "framer-motion";
 import RightArrowSvg from '../../assets/images/Vector-2.png'
 
@@ -164,7 +164,7 @@ const ServiceCard = ({ card }) => {
                     )
                 }
             </ul>
-            <Button endIcon={<img src={RightArrowSvg} className='!font-normal tracking-normal invert w-4 md:w-4 relative bottom-0.5' />} size='md' rounded={false} className='w-full !py-3 mb-6 flex gap-2 items-center' >{card.ctxText}</Button>
+            <Button onClick={openCalendly} endIcon={<img src={RightArrowSvg} className='!font-normal tracking-normal invert w-4 md:w-4 relative bottom-0.5' />} size='md' rounded={false} className='w-full !py-3 mb-6 flex gap-2 items-center' >{card.ctxText}</Button>
         </div>
     </div>
 }

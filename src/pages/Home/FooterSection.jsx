@@ -12,9 +12,9 @@ import Modal from '../../components/Modal';
 
 
 const FooterSection = ({ headlineClassName = 'text-black' }) => {
-    const headline = 'Excited? Us too!';
+    const headline = 'Start Your YouTube Evolution';
     const content = 'We craft scroll-stopping YouTube strategies that turn views into engagement and channels into brands.'
-    const ctaContent = 'Grow My Channel';
+    const ctaContent = 'Book a call';
     const links = [
         { title: 'About', link: '#about', offset: 48, },
         { title: 'Results', link: '#results', offset: 112 },
@@ -39,7 +39,7 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
             <footer className="max-w-[90rem] mx-auto md:pb-16 pb-11">
                 <div className="flex mx-auto flex-col gap-4 md:flex-row md:justify-between mb-9 items-center py-8 px-7 md:py-9 md:px-12 rounded-4xl bg-gray-50">
                     {/* <Headline>{headline}</Headline> */}
-                    <h5 className='text-4xl md:text-[1.375rem] font-medium flex-1' >{headline}</h5>
+                    <h5 className='md:text-4xl text-[1.375rem] font-medium flex-1 md:text-left text-center' >{headline}</h5>
                     <Button variant='secondary' size='md' className='!py-6 !font-medium w-full  md:w-fit'
                         endIcon={<img src={ButtonIcon} className='w-4 h-4' />}
                         onClick={openCalendly}
