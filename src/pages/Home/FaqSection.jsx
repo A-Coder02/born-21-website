@@ -9,7 +9,7 @@ import Accordion from '../../components/layout-ui/Accordion';
 import { calendlyUrl, openCalendly } from '../../utils/urls';
 
 const FaqSection = () => {
-    const headline = 'Straight Answers on YouTube Growth';
+    const headline = 'Frequently Asked Questions';
     const ctaText = 'Start your YouTube evolution – book a call';
     const accordionData = [
         {
@@ -46,7 +46,7 @@ const FaqSection = () => {
             <div className="flex md:flex-row flex-col justify-between max-w-[90rem] mx-auto md:mb-28 my-12 ">
                 <div className="max-w-[33rem] mx-auto">
                     <h3 className='!font-medium mb-7 font-nueue text-3xl md:text-5xl text-center md:text-left' >{headline}</h3>
-                    <Button onClick={openCalendly} size='md' variant='primary' className='text-black mx-auto mb-6 md:m-0 w-full' endIcon={<img src={ButtonIcon} className='invert-100 w-4 h-4' />} >{ctaText}</Button>
+                    {/* <Button onClick={openCalendly} size='md' variant='primary' className='text-black mx-auto mb-6 md:m-0 w-full' endIcon={<img src={ButtonIcon} className='invert-100 w-4 h-4' />} >{ctaText}</Button> */}
                 </div>
                 <ul type='none' className='w-full md:w-[35rem]' >
                     {
