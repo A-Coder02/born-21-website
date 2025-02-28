@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { createPortal } from "react-dom";
 import Button from "./common/Button";
 
-const Modal = ({ title, description, buttonComp }) => {
+const Modal = ({ title, children, buttonComp }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const handleClose = () => setIsOpen(false);
@@ -26,17 +26,25 @@ const Modal = ({ title, description, buttonComp }) => {
             {isOpen &&
                 createPortal(
                     <div
-                        onClick={handleClose}
-                        className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-md">
+                        // onClick={handleClose}
+                        className="fixed inset-0 flex items-center justify-center"
+                        style={{
+                            zIndex: 99999
+                        }}
+                    >
+                        <div onClick={handleClose} className="fixed inset-0 bg-black/40 backdrop-blur-md"></div>
                         <motion.div
                             initial={{ opacity: 0, y: -50 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -50 }}
                             transition={{ duration: 0.3, ease: "easeOut" }}
-                            className="bg-white rounded-2xl p-6 shadow-lg w-[95%] max-w-3xl md:w-full"
+
+                            className=" bg-white rounded-2xl p-6 shadow-lg w-[95%] max-w-3xl md:w-full relative z-10"
                         >
                             <h2 className="text-lg md:text-xl font-semibold">{title}</h2>
-                            <p className="text-gray-600 mt-2 mb-6">{description} Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quod, eveniet dolorum deleniti quibusdam nihil cum exercitationem voluptatum. Quaerat fuga quos ratione praesentium asperiores autem! Tenetur alias modi maxime optio! </p>
+                            <div className="text-gray-600 mt-2 mb-6 max-h-[70vh] overflow-auto">
+                                {children}
+                            </div>
                             <Button
                                 onClick={handleClose}
                                 variant="secondary" size="md" className="mx-auto md:mr-0 md:ml-auto block"  >

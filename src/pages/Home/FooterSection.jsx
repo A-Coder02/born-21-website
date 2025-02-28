@@ -8,6 +8,8 @@ import BrandPng from '../../assets/images/brand-lg.png';
 import Typography from '../../components/common/Typography';
 import { openCalendly } from '../../utils/urls';
 import Modal from '../../components/Modal';
+import privacyPolicyHTML from '../../utils/html-string/privacyPolicyHTML';
+import termsOfServiceHTML from '../../utils/html-string/termsOfServiceHTML';
 
 
 
@@ -20,8 +22,8 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
         { title: 'Results', link: '#results', offset: 112 },
         { title: 'Services', link: '#services', offset: 0 },
         { title: 'FAQs', link: '#faqs', offset: 84 },
-        { title: 'Privacy Policy', },
-        { title: 'Terms Of Service', },
+        { title: 'Privacy Policy', html: privacyPolicyHTML },
+        { title: 'Terms Of Service', html: termsOfServiceHTML },
     ];
     function scrollToInput(inputId, offset = 0) {
         const element = document.querySelector(inputId);
@@ -62,7 +64,10 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
                                         <li key={li.link} className='font-normal text-sm md:text-base cursor-pointer'>
                                             {li.title}
                                         </li>
-                                    } />
+                                    } >
+                                        <div className="" dangerouslySetInnerHTML={{ __html: li.html }} />
+
+                                    </Modal>
 
                             )}
                         </ul>
