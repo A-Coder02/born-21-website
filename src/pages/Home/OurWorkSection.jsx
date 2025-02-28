@@ -46,8 +46,8 @@ const OurWorkSection = () => {
     const headline = 'When Brands Take YouTube Seriously'
 
     return (
-        <Section id='results' >
-            <div className="bg-blue-light py-20 md:py-28 ">
+        <Section id='results' containerClassName='!px-0' >
+            <div className="bg-blue-light px-4 py-20 md:py-28 ">
                 <div className="max-w-[60rem] mx-auto mb-24 md:mb-48 min-h-[90%]">
 
                     <div className="flex flex-col md:gap-16 gap-6">
