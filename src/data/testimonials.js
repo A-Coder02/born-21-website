@@ -41,7 +41,28 @@ const testimonials = {
                 name: "Vishal Shaw",
                 company: "Food Photographer"
             }
-        }
+        },
+        {
+            id: 1,
+            title: "If you're on YouTube, I highly recommend working with Aniket to grow your channel!",
+            content: "Aniket is thorough and extremely knowledgeable when it comes to growing your following on YouTube. He's also very clear and concise with his instructions in a way that is easily applicable to my particular industry. He was able to help me clear the way for a specific direction in which to grow my channel and what I should stop doing.",
+            client: {
+                profile: '',
+                name: "Amir James",
+                company: "Co-Founder, MC WAR"
+            }
+        },
+        {
+            id: 2,
+            title: "Very meticulous at what he is doing!",
+            content: "His passion to help creators who are just starting out on YouTube is unparalleled. He talks about what exactly is going wrong and shows clear paths to take next steps.",
+            client: {
+                profile: '',
+                name: "Jaison Thomas",
+                company: "Co-Founder at Blusteak Media"
+            }
+        },
+
     ]
 }
 

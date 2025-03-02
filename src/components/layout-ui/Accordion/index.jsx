@@ -12,8 +12,8 @@ const Accordion = ({ title, content, expand = false, onClick = () => { } }) => {
                     transform: `rotate(${expand ? 180 : 0}deg)`
                 }} />
             </button>
-            <div className={`w-full bg-gray-200 rounded-b-xl md:rounded-b-3xl overflow-hidden accordion-item relative top-[-0.5rem] md:top-[-1rem] ${!expand ? 'accordion-item' : 'accordion-item-active'} `}>
-                <p className='flex-1 t-xl font-medium text-left text-slate-800 md:py-7 md:px-12 py-4 px-7 pt-6 md:pt-10'>
+            <div className={`w-full bg-[#F1F1F1] rounded-b-xl md:rounded-b-3xl overflow-hidden accordion-item relative top-[-0.5rem] md:top-[-1rem] ${!expand ? 'accordion-item' : 'accordion-item-active'} `}>
+                <p className='flex-1 text-base md:text-lg text-left text-[#414141] md:py-5 md:px-12 py-4 px-7 pt-6 md:pt-10'>
                     {content}
                 </p>
             </div>

@@ -46,8 +46,8 @@ const OurWorkSection = () => {
     const headline = 'When Brands Take YouTube Seriously'
 
     return (
-        <Section id='results' >
-            <div className="bg-blue-light py-20 md:py-28 ">
+        <Section id='results' containerClassName='!px-0' >
+            <div className="bg-blue-light px-4 py-20 md:py-28 ">
                 <div className="max-w-[60rem] mx-auto mb-24 md:mb-48 min-h-[90%]">
 
                     <div className="flex flex-col md:gap-16 gap-6">
@@ -83,7 +83,7 @@ const WorkSectionCard = ({
 }) => {
     const navigate = useNavigate()
     console.log({ navigate })
-    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-10 md:px-14 py-7 px-5 flex flex-col aspect-[16/12] md:aspect-auto gap-5 md:gap-12 bg-${theme.bgColor}`}
+    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-10 md:px-14 py-7 px-5 flex flex-col -aspect-[16/12] md:aspect-auto gap-5 md:gap-12 bg-${theme.bgColor}`}
         style={{
             // backgroundColor: secondaryColor
         }}

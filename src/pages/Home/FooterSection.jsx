@@ -6,20 +6,24 @@ import Button from '../../components/common/Button'
 import ButtonIcon from '../../assets/images/Vector-2.png';
 import BrandPng from '../../assets/images/brand-lg.png';
 import Typography from '../../components/common/Typography';
+import { openCalendly } from '../../utils/urls';
+import Modal from '../../components/Modal';
+import privacyPolicyHTML from '../../utils/html-string/privacyPolicyHTML';
+import termsOfServiceHTML from '../../utils/html-string/termsOfServiceHTML';
 
 
 
 const FooterSection = ({ headlineClassName = 'text-black' }) => {
-    const headline = 'Excited? Us too!';
+    const headline = 'Start Your YouTube Evolution';
     const content = 'We craft scroll-stopping YouTube strategies that turn views into engagement and channels into brands.'
-    const ctaContent = 'Grow My Channel';
+    const ctaContent = 'Book a call';
     const links = [
         { title: 'About', link: '#about', offset: 48, },
         { title: 'Results', link: '#results', offset: 112 },
         { title: 'Services', link: '#services', offset: 0 },
-        { title: 'FAQs', link: 'faqs' },
-        { title: 'Testimonials', link: 'testimonials' },
-        { title: 'Contact', link: 'contact' },
+        { title: 'FAQs', link: '#faqs', offset: 84 },
+        { title: 'Privacy Policy', html: privacyPolicyHTML },
+        { title: 'Terms Of Service', html: termsOfServiceHTML },
     ];
     function scrollToInput(inputId, offset = 0) {
         const element = document.querySelector(inputId);
@@ -37,9 +41,10 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
             <footer className="max-w-[90rem] mx-auto md:pb-16 pb-11">
                 <div className="flex mx-auto flex-col gap-4 md:flex-row md:justify-between mb-9 items-center py-8 px-7 md:py-9 md:px-12 rounded-4xl bg-gray-50">
                     {/* <Headline>{headline}</Headline> */}
-                    <h5 className='text-4xl md:text-[1.375rem] font-medium flex-1' >{headline}</h5>
+                    <h5 className='md:text-4xl text-[1.375rem] font-medium flex-1 md:text-left text-center' >{headline}</h5>
                     <Button variant='secondary' size='md' className='!py-6 !font-medium w-full  md:w-fit'
                         endIcon={<img src={ButtonIcon} className='w-4 h-4' />}
+                        onClick={openCalendly}
                     >{ctaContent}</Button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -48,11 +53,23 @@ const FooterSection = ({ headlineClassName = 'text-black' }) => {
                         <p className='mb-8 font-medium !font-nueue md:text-2xl text-[1.125rem] max-w-[30rem]' >{content}</p>
                         {/* <Typographyvariant='2xl' >{content}</Typography> */}
                         <ul className="grid md:flex flex-wrap gap-x-6 md:gap-x-12 gap-y-3 grid-cols-3 list-none max-w-[22rem]">
-                            {links.map(li => <li key={li.link} className='font-normal text-sm md:text-base cursor-pointer' onClick={() => {
-                                if (li.link.includes('#')) {
-                                    scrollToInput(li.link, li.offset)
-                                }
-                            }}  >{li.title}</li>)}
+                            {links.map(li =>
+                                li.link ?
+                                    <li key={li.link} className='font-normal text-sm md:text-base cursor-pointer' onClick={() => {
+                                        if (li.link.includes('#')) {
+                                            scrollToInput(li.link, li.offset)
+                                        }
+                                    }}  >{li.title}</li> :
+                                    <Modal title={li.title} description={li.title} key={li.link} buttonComp={
+                                        <li key={li.link} className='font-normal text-sm md:text-base cursor-pointer'>
+                                            {li.title}
+                                        </li>
+                                    } >
+                                        <div className="" dangerouslySetInnerHTML={{ __html: li.html }} />
+
+                                    </Modal>
+
+                            )}
                         </ul>
                     </div>
                 </div>
