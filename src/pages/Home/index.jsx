@@ -29,7 +29,7 @@ const Home = () => {
                         <br />
 
                     </h2>
-                    <p className='md:text-3xl text-xl md:text-center font-medium mb-28' >
+                    <p className='md:text-3xl text-xl md:text-center font-medium mb-16 md:mb-28' >
                         <span>
                             Email us at
                         </span>

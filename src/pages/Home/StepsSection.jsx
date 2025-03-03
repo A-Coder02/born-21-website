@@ -27,7 +27,7 @@ const StepsSection = () => {
     }
 
     return (
-        <Section sectionClassName='py-20 md:py-32' >
+        <Section sectionClassName='py-20 pt-14 md:py-32' >
             <div className="max-w-[90rem] mx-auto bg-[#045041] p-6 py-12 md:p-8 rounded-4xl md:px-24 md:py-20 my-0 md:my-0">
                 <p className='bg-green-light max-w-fit py-3 px-5 md:px-12 rounded-4xl uppercase mx-auto mb-4 md:mb-7 text-sm md:text-base font-medium text-[[#045041]] text-center'>
                     {chip}
