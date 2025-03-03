@@ -22,7 +22,7 @@ const AboutSection = () => {
 
 
     return (
-        <Section sectionClassName='mt-18 pt-4 md:mb-36 mb-16' id='about'>
+        <Section sectionClassName='mt-6 pt-0 md:mb-36 mb-16' id='about'>
             <div className="flex flex-col gap-0 max-w-[50rem] mx-auto">
                 {/* <div className="about-headline-wrapper flex-1 flex flex-col gap-2 md:gap-3 mx-auto">
                     <div className="about-headline-item flex gap-4 items-center ">

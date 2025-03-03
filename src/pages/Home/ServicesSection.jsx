@@ -72,7 +72,7 @@ const ServicesSection = () => {
                 </div>
             </Section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto md:mt-[-23rem] md:mb-24 mb-16 mt-[-15rem] p-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto md:mt-[-23rem] md:mb-24 mb-0 mt-[-16rem] p-4">
                 <div className="flex flex-col gap-8 md:hidden">
                     <div className=" mx-auto bg-primary-light py-1 px-2 flex gap-2 rounded-4xl">
                         {contentCard.map((c, index) =>

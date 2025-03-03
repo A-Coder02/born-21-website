@@ -48,7 +48,7 @@ const OurWorkSection = () => {
     return (
         <Section id='results' containerClassName='!px-0' >
             <div className="bg-blue-light px-4 py-20 md:py-28 ">
-                <div className="max-w-[60rem] mx-auto mb-24 md:mb-48 min-h-[90%]">
+                <div className="max-w-[60rem] mx-auto mb-0 md:mb-48 min-h-[90%]">
 
                     <div className="flex flex-col md:gap-16 gap-6">
                         <h3 className=' sticky top-28 text-center font-nohemi font-extrabold text-2xl md:text-5xl md:mb-16 mb-12' >{headline}</h3>
