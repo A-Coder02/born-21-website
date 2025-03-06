@@ -9,7 +9,7 @@ import Button from '../../components/common/Button'
 
 import LinkedingSvg from '../../assets/svgs/linkedin.svg'
 import { emailAddress, linkedinUrl, openCalendly } from '../../utils/urls'
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import RightArrowSvg from '../../assets/images/Vector-2.png'
 
 const ServicesSection = () => {
@@ -83,15 +83,24 @@ const ServicesSection = () => {
                             </div>
                         )}
                     </div>
-                    <motion.div
-                        key={active}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <ServiceCard key={active} card={contentCard.find((card, index) => index === active)} />
-                    </motion.div>
+
+                    <AnimatePresence mode="wait">
+                        {contentCard.map((card, index) =>
+                            active === index && ( // Only render if active matches index
+                                <motion.div
+                                    key={index}
+                                    layoutId={`card-${index}`}
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    exit={{ opacity: 0 }}
+                                    transition={{ duration: 0.4 }}
+                                >
+                                    <ServiceCard card={card} />
+                                </motion.div>
+                            )
+                        )}
+                    </AnimatePresence>
+
                 </div>
                 <div className="hidden md:grid md:col-span-2 md:grid-cols-2 gap-4">
                     {contentCard.map((card, index) =>
