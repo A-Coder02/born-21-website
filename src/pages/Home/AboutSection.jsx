@@ -16,8 +16,8 @@ const AboutSection = () => {
 
     const data = [
         { count: 15, title: 'Niches' },
-        { count: 50, title: 'Cities' },
-        { count: 500, title: 'View Generated', unit: 'M' },
+        { count: 50, title: 'Clients' },
+        { count: 500, title: 'Views Generated', unit: 'M' },
     ]
 
 
