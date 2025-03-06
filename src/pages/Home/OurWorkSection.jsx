@@ -82,8 +82,9 @@ const WorkSectionCard = ({
     theme, headline, small, lead,
 }) => {
     const navigate = useNavigate()
-    console.log({ navigate })
-    return <article className={` rounded-3xl md:rounded-[3.125rem] md:py-10 md:px-14 py-7 px-5 flex flex-col -aspect-[16/12] md:aspect-auto gap-5 md:gap-12 bg-${theme.bgColor}`}
+    return <article
+        onClick={() => navigate(`/services/${small}`)}
+        className={`transition-all active:scale-95 cursor-pointer rounded-3xl md:rounded-[3.125rem] md:py-10 md:px-14 py-7 px-5 flex flex-col -aspect-[16/12] md:aspect-auto gap-5 md:gap-12 bg-${theme.bgColor}`}
         style={{
             // backgroundColor: secondaryColor
         }}
@@ -111,7 +112,7 @@ const WorkSectionCard = ({
                 <p variant='xl' className='text-base md:text-xl font-light md:max-w-[29rem] text-white tracking-widest md:tracking-normal'>
                     {lead}
                 </p>
-                <div className="text-white flex items-center gap-2 cursor-pointer group" onClick={() => navigate(`/services/${small}`)} >
+                <div className="text-white flex items-center gap-2 cursor-pointer group" >
                     <p variant='' className='text-sm md:text-base' >Read Case Study</p>
                     <img src={Vector2Png} alt="" className='w-3.5 relative left-0 group-hover:left-1 transition-all' />
                 </div>
