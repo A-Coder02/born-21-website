@@ -78,7 +78,7 @@ const MyForm = ({ small, pdf_url }) => {
     const onSubmit = (values, { setSubmitting, setValues }) => {
         console.log('Form Data:', values);
         // todo:add loader
-        axios.post(emailAuditUrl, { ...values, small }).then(res => console.log({ data: res.data }))
+        axios.post(emailAuditUrl, { ...values, case_study: small }).then(res => console.log({ data: res.data }))
             .catch(err => console.log({ error: err }))
             .finally(() => {
                 setSubmitting(false)
