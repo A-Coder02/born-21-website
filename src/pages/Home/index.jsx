@@ -24,12 +24,12 @@ const Home = () => {
                 <ServicesSection />
                 <StepsSection />
                 <Section>
-                    <h2 className='font-nohemi font-bold md:text-5xl text-2xl text-blue md:text-center mb-6 md:mb-4' >
+                    <h2 className='font-nohemi font-bold md:text-5xl text-2xl text-blue text-center mb-6 md:mb-4' >
                         Didn't find what you're looking for?
                         <br />
 
                     </h2>
-                    <p className='md:text-3xl text-xl md:text-center font-medium mb-16 md:mb-28' >
+                    <p className='md:text-3xl text-xl text-center font-medium mb-16 md:mb-28' >
                         <span>
                             Email us at
                         </span>
