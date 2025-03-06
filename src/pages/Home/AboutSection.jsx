@@ -12,11 +12,11 @@ import YTGraphicSvg from '../../assets/svgs/YT-Graphic-SVG.svg'
 import AnimatedList from '../../components/AnimatedList'
 
 const AboutSection = () => {
-    const aboutParagraph = 'Born21 Media LLC is a YouTube Growth agency committed to helping mid to large-sized brands & businesses transform their YouTube presence into a powerful digital asset';
+    const aboutParagraph = 'Born21 Media LLC is a New York Based YouTube Growth agency committed to helping mid to large-sized brands & businesses transform their YouTube presence into a powerful digital asset';
 
     const data = [
         { count: 15, title: 'Niches' },
-        { count: 50, title: 'Niches' },
+        { count: 50, title: 'Cities' },
         { count: 500, title: 'View Generated', unit: 'M' },
     ]
 
@@ -54,7 +54,7 @@ const AboutSection = () => {
                         viewport={{ once: true }}
                     >
                         <p className='text-2xl md:text-xl font-medium flex-1' >
-                            Born21 Media is a YouTube Growth agency committed to helping mid to large-sized brands & businesses <br />
+                            Born21 Media is a New York Based YouTube Growth agency committed to helping mid to large-sized brands & businesses <br />
                             <span className='text-gray-400 inline pl-1' >
                                 transform their YouTube presence into a powerful digital asset
                             </span>
