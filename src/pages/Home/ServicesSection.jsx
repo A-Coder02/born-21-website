@@ -74,11 +74,18 @@ const ServicesSection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-[60rem] mx-auto md:mt-[-23rem] md:mb-24 mb-0 mt-[-16rem] p-4">
                 <div className="flex flex-col gap-8 md:hidden">
-                    <div className=" mx-auto bg-primary-light py-1 px-2 flex gap-2 rounded-4xl">
+                    <div className=" mx-auto bg-primary-light py-1 px-2 flex gap-2 rounded-4xl relative">
+                        <div
+                            className={`absolute w-1/2 h-[calc(100% - 0.5rem)] duration-500 flex-1 bg-green transition-all font-medium rounded-4xl py-2 px-4 flex-1 text-nowrap`} style={{
+                                left: active === 1 ? '48.5%' : '1.5%',
+                                top: '0.25rem',
+                                bottom: '0.25rem',
+                            }} >
+                        </div>
                         {contentCard.map((c, index) =>
                             <div key={c.id}
                                 onClick={() => setActive(index)}
-                                className={`${active === index ? "bg-green" : 'bg-transparent'} ${active === index ? "text-white" : 'text-black'} transition font-medium rounded-4xl py-2 px-4 flex-1 text-nowrap`}>
+                                className={`relative duration-500 flex-1 ${active === index ? "bg-green" : 'bg-transparent'} ${active === index ? "text-white" : 'text-black'} transition-all font-medium rounded-4xl py-2 px-4 flex-1 text-nowrap`}>
                                 {c.tabText}
                             </div>
                         )}
@@ -90,16 +97,18 @@ const ServicesSection = () => {
                                 <motion.div
                                     key={index}
                                     layoutId={`card-${index}`}
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.4 }}
+                                    initial={{ rotateY: 90 }}
+                                    animate={{ rotateY: 0 }}
+                                    exit={{ rotateY: -90 }}
+                                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                                    style={{ transformPerspective: 3000 }}
                                 >
                                     <ServiceCard card={card} />
                                 </motion.div>
                             )
                         )}
                     </AnimatePresence>
+
 
                 </div>
                 <div className="hidden md:grid md:col-span-2 md:grid-cols-2 gap-4">
