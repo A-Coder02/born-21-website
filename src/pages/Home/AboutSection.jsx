@@ -54,9 +54,11 @@ const AboutSection = () => {
                         viewport={{ once: true }}
                     >
                         <p className='text-2xl md:text-xl font-medium flex-1' >
-                            Born21 Media is a New York Based YouTube Growth agency committed to helping mid to large-sized brands & businesses <br />
-                            <span className='text-gray-400 inline pl-1' >
-                                transform their YouTube presence into a powerful digital asset
+                            <span>
+                                Born21 Media is a New York Based YouTube Growth agency committed to helping mid to large-sized brands & businesses
+                            </span>
+                            <span className='text-gray-400 inline md:pl-1' >
+                                {" "} transform their YouTube presence into a powerful digital asset
                             </span>
                         </p>
                     </motion.div>
